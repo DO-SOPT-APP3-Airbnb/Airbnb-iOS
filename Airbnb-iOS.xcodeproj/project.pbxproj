@@ -20,6 +20,8 @@
 		36F2E5592B08979400794274 /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5582B08979400794274 /* ImageLiteral.swift */; };
 		36F2E55B2B08979F00794274 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E55A2B08979F00794274 /* Font.swift */; };
 		36F2E55D2B0897A800794274 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E55C2B0897A800794274 /* Color.swift */; };
+		36F2E5602B08AAA700794274 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36F2E55F2B08AAA700794274 /* Kingfisher */; };
+		36F2E5632B08AAC900794274 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 36F2E5622B08AAC900794274 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F2E5602B08AAA700794274 /* Kingfisher in Frameworks */,
+				36F2E5632B08AAC900794274 /* FSCalendar in Frameworks */,
 				02CEB92D2B08806B0036A100 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +189,8 @@
 			name = "Airbnb-iOS";
 			packageProductDependencies = (
 				02CEB92C2B08806B0036A100 /* SnapKit */,
+				36F2E55F2B08AAA700794274 /* Kingfisher */,
+				36F2E5622B08AAC900794274 /* FSCalendar */,
 			);
 			productName = "Airbnb-iOS";
 			productReference = 02CEB9142B0868C30036A100 /* Airbnb-iOS.app */;
@@ -216,6 +222,8 @@
 			mainGroup = 02CEB90B2B0868C30036A100;
 			packageReferences = (
 				02CEB92B2B08806B0036A100 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				36F2E55E2B08AAA700794274 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				36F2E5612B08AAC900794274 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 02CEB9152B0868C30036A100 /* Products */;
 			projectDirPath = "";
@@ -470,6 +478,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		36F2E55E2B08AAA700794274 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		36F2E5612B08AAC900794274 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -477,6 +501,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 02CEB92B2B08806B0036A100 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		36F2E55F2B08AAA700794274 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36F2E55E2B08AAA700794274 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		36F2E5622B08AAC900794274 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36F2E5612B08AAC900794274 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
