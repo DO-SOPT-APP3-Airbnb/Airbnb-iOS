@@ -23,6 +23,9 @@
 		36F2E5602B08AAA700794274 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36F2E55F2B08AAA700794274 /* Kingfisher */; };
 		36F2E5632B08AAC900794274 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 36F2E5622B08AAC900794274 /* FSCalendar */; };
 		36F2E5772B09CEDD00794274 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F2E5762B09CEDD00794274 /* Poppins-SemiBold.ttf */; };
+		36F2E5822B0A5F1800794274 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5812B0A5F1800794274 /* CustomNavigationView.swift */; };
+		36F2E5842B0A61B900794274 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5832B0A61B900794274 /* UIStackView+.swift */; };
+		36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5872B0A746D00794274 /* UILabel+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		36F2E55A2B08979F00794274 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		36F2E55C2B0897A800794274 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		36F2E5762B09CEDD00794274 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		36F2E5812B0A5F1800794274 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
+		36F2E5832B0A61B900794274 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		36F2E5872B0A746D00794274 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				36F2E5522B08975C00794274 /* UIView+.swift */,
+				36F2E5832B0A61B900794274 /* UIStackView+.swift */,
+				36F2E5872B0A746D00794274 /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 		36F2E54A2B08969800794274 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				36F2E5802B0A5F0100794274 /* Helper */,
 				02CEB91B2B0868C30036A100 /* ViewController.swift */,
 			);
 			path = Scenes;
@@ -172,6 +181,14 @@
 				02CEB9192B0868C30036A100 /* SceneDelegate.swift */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		36F2E5802B0A5F0100794274 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				36F2E5812B0A5F1800794274 /* CustomNavigationView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,11 +275,14 @@
 				36F2E5552B08976100794274 /* B.swift in Sources */,
 				02CEB91C2B0868C30036A100 /* ViewController.swift in Sources */,
 				02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */,
+				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
 				02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */,
 				36F2E5512B08975200794274 /* A.swift in Sources */,
 				36F2E55B2B08979F00794274 /* Font.swift in Sources */,
+				36F2E5842B0A61B900794274 /* UIStackView+.swift in Sources */,
 				36F2E5592B08979400794274 /* ImageLiteral.swift in Sources */,
+				36F2E5822B0A5F1800794274 /* CustomNavigationView.swift in Sources */,
 				36F2E5572B08976500794274 /* C.swift in Sources */,
 				36F2E5532B08975C00794274 /* UIView+.swift in Sources */,
 			);
