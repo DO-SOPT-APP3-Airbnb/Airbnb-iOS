@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: Enum
-enum viewMode {
+enum ViewMode {
     case darkMode
     case lightMode
 }
@@ -77,7 +77,7 @@ class CustomNavigationView: UIView {
         setUI()
     }
     
-    init(level: Float, mode: viewMode = .lightMode) {
+    init(level: Float, mode: ViewMode = .lightMode) {
         super.init(frame: .zero)
         self.progressLevel = level / 3
         if mode == .darkMode { setDarkMode() }
