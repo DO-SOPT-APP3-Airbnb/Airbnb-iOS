@@ -22,6 +22,7 @@
 		36F2E55D2B0897A800794274 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E55C2B0897A800794274 /* Color.swift */; };
 		36F2E5602B08AAA700794274 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36F2E55F2B08AAA700794274 /* Kingfisher */; };
 		36F2E5632B08AAC900794274 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 36F2E5622B08AAC900794274 /* FSCalendar */; };
+		36F2E5772B09CEDD00794274 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 36F2E5762B09CEDD00794274 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		36F2E5582B08979400794274 /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
 		36F2E55A2B08979F00794274 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		36F2E55C2B0897A800794274 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		36F2E5762B09CEDD00794274 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		36F2E54C2B0896C200794274 /* Literals */ = {
 			isa = PBXGroup;
 			children = (
+				36F2E5762B09CEDD00794274 /* Poppins-SemiBold.ttf */,
 				36F2E5582B08979400794274 /* ImageLiteral.swift */,
 				36F2E55A2B08979F00794274 /* Font.swift */,
 				36F2E55C2B0897A800794274 /* Color.swift */,
@@ -241,6 +244,7 @@
 			files = (
 				02CEB9242B0868C40036A100 /* LaunchScreen.storyboard in Resources */,
 				02CEB9212B0868C40036A100 /* Assets.xcassets in Resources */,
+				36F2E5772B09CEDD00794274 /* Poppins-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
