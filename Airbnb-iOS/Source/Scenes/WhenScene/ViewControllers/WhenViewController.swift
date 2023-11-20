@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FSCalendar
 
 class WhenViewController: UIViewController {
     // MARK: - Variables
@@ -22,6 +23,7 @@ class WhenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setDelegate()
     }
     // MARK: Layout Helpers
     
@@ -31,7 +33,7 @@ class WhenViewController: UIViewController {
     }
     
     private func setStyle() {
-    
+        
     }
     
     private func setLayout() {
@@ -42,8 +44,33 @@ class WhenViewController: UIViewController {
     }
     
     // MARK: Custom Function
+    private func setDelegate() {
+        whenView.calendarView.delegate = self
+        whenView.calendarView.dataSource = self
+        whenView.dateSelectCollectionView.delegate = self
+    }
     
     // MARK: Objc Function
     
+    
+}
 
+// MARK: - Extension
+extension WhenViewController: FSCalendarDelegate { }
+
+extension WhenViewController: FSCalendarDataSource { }
+
+
+extension WhenViewController: UICollectionViewDelegate {
+    
+}
+
+extension WhenViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let name = whenView.dateSelectList[indexPath.row]
+        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
+        let nameSize = (name as NSString).size(withAttributes: attributes as [NSAttributedString.Key: Any])
+        let paddingSize = (name == "정확한 날짜") ? 30 : 45
+        return CGSize(width: Int((nameSize.width)) + paddingSize, height: 35)
+    }
 }
