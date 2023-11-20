@@ -34,5 +34,6 @@ class ImageLiteral {
     
     static let btnMinus = UIImage(named: "btn_minus")!
     static let btnPlus = UIImage(named: "btn_plus")!
+    static let btnX = UIImage(named: "btn_x")!
     
 }
