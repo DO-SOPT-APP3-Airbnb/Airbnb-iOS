@@ -132,6 +132,7 @@ class CustomNavigationView: UIView {
     /// darkMode가 필요할 때 변경하는 함수입니다. 기본은 라이트모드
     private func setDarkMode() {
         lodgingLabel.textColor = .black
+        selectLineView.backgroundColor = .black1
     }
     
     // MARK: Objc Function
