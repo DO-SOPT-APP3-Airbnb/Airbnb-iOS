@@ -24,6 +24,7 @@ class WhenViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setDelegate()
+        addTarget()
     }
     // MARK: Layout Helpers
     
@@ -49,11 +50,14 @@ class WhenViewController: UIViewController {
     }
     
     private func addTarget() {
-        
+        whenView.nextButton.addTarget(self, action: #selector(nextButtonDidTap), for: .touchUpInside)
+        whenView.skipButton.addTarget(self, action: #selector(nextButtonDidTap), for: .touchUpInside)
     }
     
     // MARK: Objc Function
-    
+    @objc func nextButtonDidTap() {
+        print("tap")
+    }
     
 }
 

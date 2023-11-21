@@ -65,7 +65,7 @@ class WhenView: UIView {
         return collectionView
     }()
     
-    private let skipButton: UIButton = {
+    let skipButton: UIButton = {
         let button = UIButton()
         button.setTitle("건너뛰기", for: .normal)
         button.setTitleColor(.black1, for: .normal)
@@ -74,7 +74,7 @@ class WhenView: UIView {
         return button
     }()
     
-    private lazy var nextButton: UIButton = {
+    let nextButton: UIButton = {
         let button = UIButton()
         button.setTitle("다음", for: .normal)
         button.setTitleColor(.white, for: .normal)
