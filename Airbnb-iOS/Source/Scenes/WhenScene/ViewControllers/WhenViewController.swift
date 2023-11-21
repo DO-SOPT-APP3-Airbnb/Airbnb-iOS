@@ -48,15 +48,17 @@ class WhenViewController: UIViewController {
         whenView.dateSelectCollectionView.delegate = self
     }
     
+    private func addTarget() {
+        
+    }
+    
     // MARK: Objc Function
     
     
 }
 
 // MARK: - Extension
-extension WhenViewController: UICollectionViewDelegate {
-    
-}
+extension WhenViewController: UICollectionViewDelegate { }
 
 extension WhenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

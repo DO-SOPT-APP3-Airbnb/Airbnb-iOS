@@ -8,11 +8,12 @@
 import UIKit
 
 class CalendarView: UIView {
+    // MARK: - Variables
+    // MARK: Constants
     let weekDayText = ["일", "월", "화", "수", "목", "금", "토"]
-    var monthText = [1...30]
     let calendarDateFormatter = CalendarDateFormatter()
     
-    
+    // MARK: Component
     let weekdayStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -35,6 +36,8 @@ class CalendarView: UIView {
         return collectionView
     }()
     
+    // MARK: - Function
+    // MARK: LifeCycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.updateCalendarData()
@@ -45,6 +48,7 @@ class CalendarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Layout Helpers
     private func setUI(){
         setStyle()
         setLayout()
@@ -68,6 +72,7 @@ class CalendarView: UIView {
         }
     }
     
+    // MARK: Custom Function
     private func configureWeekDay() {
         weekDayText.forEach {
             let label = UILabel()
@@ -83,10 +88,12 @@ class CalendarView: UIView {
         self.calendarDateFormatter.updateCurrentMonthDays()
     }
     
-    
 }
 
+//MARK: - Extension
+//MARK: CollectionViewDataSource
 extension CalendarView: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.calendarDateFormatter.days.count
     }

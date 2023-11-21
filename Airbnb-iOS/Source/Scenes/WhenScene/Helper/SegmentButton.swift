@@ -8,6 +8,8 @@
 import UIKit
 
 class SegmentButton: UIButton {
+    // MARK: - Variables
+    // MARK: Property
     var isSelect: Bool = false {
         didSet {
             if isSelect {
@@ -18,6 +20,10 @@ class SegmentButton: UIButton {
             }
         }
     }
+    
+    // MARK: - Function
+    // MARK: LifeCycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -26,7 +32,7 @@ class SegmentButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Custom Init
+    /// Custom Init
     init(buttonTitle: String, isSelected: Bool = false) {
         super.init(frame: .zero)
         self.setTitle(buttonTitle, for: .normal)
@@ -34,5 +40,4 @@ class SegmentButton: UIButton {
         self.setTitleColor(.black1, for: .normal)
         isSelect = isSelected
     }
-    
 }

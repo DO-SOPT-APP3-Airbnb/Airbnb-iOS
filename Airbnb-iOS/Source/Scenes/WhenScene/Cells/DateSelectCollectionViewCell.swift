@@ -8,7 +8,11 @@
 import UIKit
 
 class DateSelectCollectionViewCell: UICollectionViewCell {
+    // MARK: - Variables
+    // MARK: Constants
     static let reusableId = "DateSelectCollectionViewCell"
+    
+    // MARK: Property
     var isFirstCell = false {
         didSet{
             configureFirstCell()
@@ -16,6 +20,7 @@ class DateSelectCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: Component (button, label 등 코드로 만들때)
     var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black1
@@ -38,6 +43,9 @@ class DateSelectCollectionViewCell: UICollectionViewCell {
         return stackView
     }()
     
+    
+    // MARK: - Function
+    // MARK: LifeCycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
@@ -46,6 +54,8 @@ class DateSelectCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: Layout Helpers
     private func setUI(){
         setStyle()
         setLayout()
@@ -73,6 +83,7 @@ class DateSelectCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    // MARK: Custom Function
     func configureFirstCell() {
         titleStackView.removeFromSuperview()
         self.makeBorder(width: 1.5, color: .black1)
