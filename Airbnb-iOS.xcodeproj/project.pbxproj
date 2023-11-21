@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02292C012B0BB66B00F41698 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C002B0BB66B00F41698 /* ExploreView.swift */; };
+		02292C032B0BB68100F41698 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C022B0BB68100F41698 /* ExploreViewController.swift */; };
+		02292C062B0C5A1200F41698 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C052B0C5A1200F41698 /* TabBarItem.swift */; };
+		02292C082B0C5BA400F41698 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C072B0C5BA400F41698 /* TabBarController.swift */; };
 		02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CEB9172B0868C30036A100 /* AppDelegate.swift */; };
 		02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CEB9192B0868C30036A100 /* SceneDelegate.swift */; };
 		02CEB9212B0868C40036A100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9202B0868C40036A100 /* Assets.xcassets */; };
@@ -50,6 +54,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02292C002B0BB66B00F41698 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		02292C022B0BB68100F41698 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		02292C052B0C5A1200F41698 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		02292C072B0C5BA400F41698 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		02CEB9142B0868C30036A100 /* Airbnb-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Airbnb-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CEB9172B0868C30036A100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02CEB9192B0868C30036A100 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +106,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02292BFF2B0BB40100F41698 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				02292C002B0BB66B00F41698 /* ExploreView.swift */,
+				02292C022B0BB68100F41698 /* ExploreViewController.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		02292C042B0C5A0000F41698 /* TapBar */ = {
+			isa = PBXGroup;
+			children = (
+				02292C052B0C5A1200F41698 /* TabBarItem.swift */,
+				02292C072B0C5BA400F41698 /* TabBarController.swift */,
+			);
+			path = TapBar;
+			sourceTree = "<group>";
+		};
 		02CEB90B2B0868C30036A100 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +224,8 @@
 		36F2E54A2B08969800794274 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				02292C042B0C5A0000F41698 /* TapBar */,
+				02292BFF2B0BB40100F41698 /* Explore */,
 				36F2E5782B0A5C5E00794274 /* WhenScene */,
 				367DB4282B0DF40400B91AC8 /* CalendarDateFormatter.swift */,
 				34A8DE1D2B0DBEE100331C8D /* Where */,
@@ -371,9 +399,12 @@
 			files = (
 				367DB4202B0DF39900B91AC8 /* UIStackView+.swift in Sources */,
 				34A8DE1F2B0DBF1000331C8D /* WhereViewController.swift in Sources */,
+				02292C012B0BB66B00F41698 /* ExploreView.swift in Sources */,
 				36F2E5552B08976100794274 /* B.swift in Sources */,
 				367DB40B2B0DF32600B91AC8 /* DateSelectCollectionViewCell.swift in Sources */,
 				367DB4102B0DF37F00B91AC8 /* WhenView.swift in Sources */,
+				02292C032B0BB68100F41698 /* ExploreViewController.swift in Sources */,
+				02CEB91C2B0868C30036A100 /* ViewController.swift in Sources */,
 				02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */,
 				3686A6D12B0D0BE20072261D /* (null) in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
@@ -386,6 +417,8 @@
 				367DB4272B0DF3F200B91AC8 /* CalendarView.swift in Sources */,
 				34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
+				02292C082B0C5BA400F41698 /* TabBarController.swift in Sources */,
+				02292C062B0C5A1200F41698 /* TabBarItem.swift in Sources */,
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
 				3686A6C92B0CB2840072261D /* (null) in Sources */,
 				02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */,
