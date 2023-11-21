@@ -18,6 +18,7 @@
 		3686A6CB2B0CEDDA0072261D /* Adjust+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A6CA2B0CEDDA0072261D /* Adjust+.swift */; };
 		3686A6CD2B0CF0630072261D /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A6CC2B0CF0630072261D /* UIScreen+.swift */; };
 		3686A6CF2B0CFD220072261D /* CalendarDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A6CE2B0CFD220072261D /* CalendarDateFormatter.swift */; };
+		3686A6D12B0D0BE20072261D /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A6D02B0D0BE20072261D /* String+.swift */; };
 		36983A0D2B0BAF8600E05FFE /* DateSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36983A0C2B0BAF8600E05FFE /* DateSelectCollectionViewCell.swift */; };
 		36983A0F2B0BD8A300E05FFE /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36983A0E2B0BD8A300E05FFE /* UIButton+.swift */; };
 		36F2E5512B08975200794274 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5502B08975200794274 /* A.swift */; };
@@ -50,6 +51,7 @@
 		3686A6CA2B0CEDDA0072261D /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
 		3686A6CC2B0CF0630072261D /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
 		3686A6CE2B0CFD220072261D /* CalendarDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateFormatter.swift; sourceTree = "<group>"; };
+		3686A6D02B0D0BE20072261D /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		36983A0C2B0BAF8600E05FFE /* DateSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectCollectionViewCell.swift; sourceTree = "<group>"; };
 		36983A0E2B0BD8A300E05FFE /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		36F2E5502B08975200794274 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				36F2E5522B08975C00794274 /* UIView+.swift */,
+				3686A6D02B0D0BE20072261D /* String+.swift */,
 				36F2E5832B0A61B900794274 /* UIStackView+.swift */,
 				36F2E5872B0A746D00794274 /* UILabel+.swift */,
 				36983A0E2B0BD8A300E05FFE /* UIButton+.swift */,
@@ -341,6 +344,7 @@
 			files = (
 				36F2E5552B08976100794274 /* B.swift in Sources */,
 				02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */,
+				3686A6D12B0D0BE20072261D /* String+.swift in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
 				3686A6C52B0CA07F0072261D /* SegmentButton.swift in Sources */,
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
