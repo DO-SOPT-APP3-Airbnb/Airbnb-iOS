@@ -12,6 +12,7 @@
 		02CEB9212B0868C40036A100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9202B0868C40036A100 /* Assets.xcassets */; };
 		02CEB9242B0868C40036A100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9222B0868C40036A100 /* LaunchScreen.storyboard */; };
 		02CEB92D2B08806B0036A100 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 02CEB92C2B08806B0036A100 /* SnapKit */; };
+		3686A6C52B0CA07F0072261D /* SegmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A6C42B0CA07F0072261D /* SegmentButton.swift */; };
 		3686A6CB2B0CEDDA0072261D /* Adjust+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A6CA2B0CEDDA0072261D /* Adjust+.swift */; };
 		3686A6CD2B0CF0630072261D /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3686A6CC2B0CF0630072261D /* UIScreen+.swift */; };
 		36983A0D2B0BAF8600E05FFE /* DateSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36983A0C2B0BAF8600E05FFE /* DateSelectCollectionViewCell.swift */; };
@@ -40,6 +41,7 @@
 		02CEB9202B0868C40036A100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02CEB9232B0868C40036A100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02CEB9252B0868C40036A100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3686A6C42B0CA07F0072261D /* SegmentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentButton.swift; sourceTree = "<group>"; };
 		3686A6CA2B0CEDDA0072261D /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
 		3686A6CC2B0CF0630072261D /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
 		36983A0C2B0BAF8600E05FFE /* DateSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 				02CEB9252B0868C40036A100 /* Info.plist */,
 			);
 			path = "Airbnb-iOS";
+			sourceTree = "<group>";
+		};
+		3686A6C32B0CA0720072261D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3686A6C42B0CA07F0072261D /* SegmentButton.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		36F2E5452B0895CA00794274 /* Source */ = {
@@ -199,6 +209,7 @@
 		36F2E5782B0A5C5E00794274 /* WhenScene */ = {
 			isa = PBXGroup;
 			children = (
+				3686A6C32B0CA0720072261D /* Helper */,
 				36F2E57B2B0A5C7D00794274 /* Cells */,
 				36F2E57A2B0A5C7900794274 /* Views */,
 				36F2E5792B0A5C7000794274 /* ViewControllers */,
@@ -322,6 +333,7 @@
 				36F2E5552B08976100794274 /* B.swift in Sources */,
 				02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
+				3686A6C52B0CA07F0072261D /* SegmentButton.swift in Sources */,
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
 				3686A6CB2B0CEDDA0072261D /* Adjust+.swift in Sources */,
 				02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */,
