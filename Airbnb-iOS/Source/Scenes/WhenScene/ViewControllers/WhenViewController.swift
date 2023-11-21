@@ -45,8 +45,6 @@ class WhenViewController: UIViewController {
     
     // MARK: Custom Function
     private func setDelegate() {
-        whenView.calendarView.delegate = self
-        whenView.calendarView.dataSource = self
         whenView.dateSelectCollectionView.delegate = self
     }
     
@@ -56,11 +54,6 @@ class WhenViewController: UIViewController {
 }
 
 // MARK: - Extension
-extension WhenViewController: FSCalendarDelegate { }
-
-extension WhenViewController: FSCalendarDataSource { }
-
-
 extension WhenViewController: UICollectionViewDelegate {
     
 }
@@ -70,7 +63,7 @@ extension WhenViewController: UICollectionViewDelegateFlowLayout {
         let name = whenView.dateSelectList[indexPath.row]
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)]
         let nameSize = (name as NSString).size(withAttributes: attributes as [NSAttributedString.Key: Any])
-        let paddingSize = (name == "정확한 날짜") ? 30 : 45
-        return CGSize(width: Int((nameSize.width)) + paddingSize, height: 35)
+        let paddingSize = (name == "정확한 날짜") ? 30.adjusted : 45.adjusted
+        return CGSize(width: CGFloat(Int((nameSize.width))) + paddingSize, height: 35.adjusted)
     }
 }

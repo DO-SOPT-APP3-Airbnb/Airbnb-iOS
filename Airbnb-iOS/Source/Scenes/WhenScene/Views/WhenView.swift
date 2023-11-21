@@ -14,6 +14,7 @@ class WhenView: UIView {
     // MARK: - Variables
     // MARK: Property
     let dateSelectList = ["정확한 날짜", "1일", "2일", "3일", "4일", "5일", "6일", "7일"]
+    let buttonText = ["날짜 지정", "월 단위", "유연한 일정"]
     
     // MARK: Component
     let navigationBar = CustomNavigationView(level: 2, mode: .darkMode)
@@ -28,37 +29,31 @@ class WhenView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "언제 여행을 가실 예정인가요?"
-        label.font = .systemFont(ofSize: 25, weight: .bold)
-        label.setLineSpacing(spacing: 30)
+        label.font = .systemFont(ofSize: 25.adjusted, weight: .bold)
+        label.setLineSpacing(spacing: 30.adjusted)
         return label
     }()
     
     private let backgroundView: UIView =  {
         let view = UIView()
         view.backgroundColor = .white.withAlphaComponent(0.4)
-        view.makeCornerRound(radius: 20)
+        view.makeCornerRound(radius: 20.adjusted)
         return view
     }()
     
-    private let selectSegmentControl: UISegmentedControl = {
-        let segmentedControl = UISegmentedControl()
-        segmentedControl.insertSegment(withTitle: "날짜지정", at: 0, animated: true)
-        segmentedControl.insertSegment(withTitle: "월 단위", at: 1, animated: true)
-        segmentedControl.insertSegment(withTitle: "유연한 일정", at: 2, animated: true)
-        segmentedControl.setWidth(100, forSegmentAt: 0)
-        segmentedControl.setWidth(100, forSegmentAt: 1)
-        segmentedControl.setWidth(100, forSegmentAt: 2)
-        segmentedControl.backgroundColor = .grayGrayLine
-        segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.makeCornerRound(radius: 20)
-        return segmentedControl
+    private lazy var optionSelectButtonStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.backgroundColor = .grayGrayLine
+        stackView.makeCornerRound(radius: 20.adjusted)
+        stackView.distribution = .fillEqually
+        return stackView
     }()
     
-    let calendarView = FSCalendar()
+    let calendarView = CalendarView()
     
     lazy var dateSelectCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.minimumLineSpacing = 16
+        flowLayout.minimumLineSpacing = 16.adjusted
         flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         flowLayout.scrollDirection = .horizontal
         
@@ -89,6 +84,9 @@ class WhenView: UIView {
         return button
     }()
     
+    
+    // MARK: - Function
+    // MARK: LifeCycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
@@ -98,18 +96,27 @@ class WhenView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: Layout Helpers
     private func setUI(){
         setStyle()
         setLayout()
     }
     
     private func setStyle() {
-        setCalendarUI()
+        configureSegmentButton()
     }
     
     private func setLayout() {
-        self.addSubviews(backgroundImageView, navigationBar, titleLabel, backgroundView)
-        backgroundView.addSubviews(selectSegmentControl, calendarView, dateSelectCollectionView,skipButton, nextButton)
+        self.addSubviews(backgroundImageView,
+                         navigationBar,
+                         titleLabel,
+                         backgroundView)
+        backgroundView.addSubviews(optionSelectButtonStackView,
+                                   calendarView,
+                                   dateSelectCollectionView,
+                                   skipButton,
+                                   nextButton)
         
         backgroundImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -117,103 +124,90 @@ class WhenView: UIView {
         
         navigationBar.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
-            $0.height.equalTo(128)
+            $0.height.equalTo(128.adjusted)
         }
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom).offset(35)
-            $0.leading.equalToSuperview().offset(20)
+            $0.top.equalTo(navigationBar.snp.bottom).offset(35.adjusted)
+            $0.leading.equalToSuperview().offset(20.adjusted)
         }
         
         backgroundView.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(31)
-            $0.leading.trailing.equalToSuperview().inset(18)
-            $0.bottom.equalToSuperview().inset(55)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(31.adjusted)
+            $0.leading.trailing.equalToSuperview().inset(18.adjusted)
+            if UIScreen.main.isLongerThan812pt {
+                $0.bottom.equalToSuperview().inset(55.adjusted)
+            } else {
+                $0.bottom.equalToSuperview().inset(18.adjusted)
+            }
         }
         
-        
-        selectSegmentControl.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(24)
-            $0.centerX.equalToSuperview()
-            $0.height.equalTo(40)
+        optionSelectButtonStackView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(21.adjusted)
+            $0.top.equalToSuperview().offset(24.adjusted)
+            $0.height.equalTo(40.adjusted)
         }
         
         calendarView.snp.makeConstraints {
-            $0.top.equalTo(selectSegmentControl.snp.bottom).offset(27)
-            $0.leading.trailing.equalToSuperview().inset(26)
-            $0.height.equalTo(289)
+            if UIScreen.main.isLongerThan812pt {
+                $0.top.equalTo(optionSelectButtonStackView.snp.bottom).offset(27.adjusted)
+            } else {
+                $0.top.equalTo(optionSelectButtonStackView.snp.bottom).offset(12.adjusted)
+            }
+            $0.leading.trailing.equalToSuperview().inset(32.adjusted)
         }
         
         dateSelectCollectionView.snp.makeConstraints {
-            $0.top.equalTo(calendarView.snp.bottom).offset(34)
-            $0.leading.equalToSuperview().offset(8)
+            if UIScreen.main.isLongerThan812pt {
+                $0.top.equalTo(calendarView.snp.bottom).offset(34.adjusted)
+            } else {
+                $0.top.equalTo(calendarView.snp.bottom).offset(12.adjusted)
+            }
+            $0.leading.equalToSuperview().offset(8.adjusted)
             $0.trailing.equalToSuperview()
-            $0.height.equalTo(36)
+            if UIScreen.main.isLongerThan812pt {
+                $0.bottom.equalTo(nextButton.snp.top).offset(-39.adjusted)
+            } else {
+                $0.bottom.equalTo(nextButton.snp.top).offset(-15.adjusted)
+            }
+            $0.height.equalTo(36.adjusted)
         }
         
         skipButton.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(30)
-            $0.leading.equalToSuperview().offset(27)
+            if UIScreen.main.isLongerThan812pt {
+                $0.bottom.equalToSuperview().inset(30.adjusted)
+            } else {
+                $0.bottom.equalToSuperview().inset(24.adjusted)
+            }
+            $0.leading.equalToSuperview().offset(27.adjusted)
         }
         
         nextButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(16)
+            $0.trailing.equalToSuperview().inset(16.adjusted)
             $0.centerY.equalTo(skipButton.snp.centerY)
-            $0.height.equalTo(46)
-            $0.width.equalTo(119)
+            $0.height.equalTo(46.adjusted)
+            $0.width.equalTo(119.adjusted)
         }
         
     }
     
-    func setCalendarUI() {
-        // calendar locale > 한국으로 설정
-        self.calendarView.locale = Locale(identifier: "ko_KR")
-        // 상단 요일을 한글로 변경
-        self.calendarView.calendarWeekdayView.weekdayLabels[0].text = "일"
-        self.calendarView.calendarWeekdayView.weekdayLabels[1].text = "월"
-        self.calendarView.calendarWeekdayView.weekdayLabels[2].text = "화"
-        self.calendarView.calendarWeekdayView.weekdayLabels[3].text = "수"
-        self.calendarView.calendarWeekdayView.weekdayLabels[4].text = "목"
-        self.calendarView.calendarWeekdayView.weekdayLabels[5].text = "금"
-        self.calendarView.calendarWeekdayView.weekdayLabels[6].text = "토"
-        
-        // 월~일 글자 폰트 및 사이즈 지정
-        self.calendarView.appearance.weekdayFont = .iosBodyMedium14
-        // 숫자들 글자 폰트 및 사이즈 지정
-        self.calendarView.appearance.titleFont = .iosBodyBold14
-        
-        // 캘린더 스크롤 가능하게 지정
-        self.calendarView.scrollEnabled = true
-        // 캘린더 스크롤 방향 지정
-        self.calendarView.scrollDirection = .horizontal
-        
-        // 요일 글자 색
-        self.calendarView.appearance.weekdayTextColor = UIColor(named: "F5F5F5")?.withAlphaComponent(0.2)
-        
-        // 캘린더 높이 지정
-        self.calendarView.headerHeight = 0
-        
-        // 캘린더의 cornerRadius 지정
-        self.calendarView.layer.cornerRadius = 10
-        
-        // 양옆 년도, 월 지우기
-        self.calendarView.appearance.headerMinimumDissolvedAlpha = 0.0
-        
-        // 달에 유효하지 않은 날짜의 색 지정
-        self.calendarView.appearance.titlePlaceholderColor = UIColor.white.withAlphaComponent(0.2)
-        // 평일 날짜 색
-        self.calendarView.appearance.titleDefaultColor = .black1
-        self.calendarView.appearance.titleWeekendColor = .main1
-        self.calendarView.appearance.subtitleWeekendColor = .grayGrayText
-        // 달에 유효하지않은 날짜 지우기
-        self.calendarView.placeholderType = .none
-        //
-        //        // 캘린더 숫자와 subtitle간의 간격 조정
-        //        self.calendarView.appearance.subtitleOffset = CGPoint(x: 0, y: 4)
+    // MARK: Custom Function
+    private func configureSegmentButton() {
+        for i in 0 ..< buttonText.count {
+            let button = SegmentButton(buttonTitle: buttonText[i])
+            if i == 0 {
+                button.isSelect = true
+            }
+            optionSelectButtonStackView.addArrangedSubview(button)
+        }
     }
+    // MARK: Objc Function
 }
 
+// MARK: - Extension
+// MARK: CollectionViewDataSource
 extension WhenView: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dateSelectList.count
     }
@@ -226,5 +220,6 @@ extension WhenView: UICollectionViewDataSource {
         cell.titleLabel.text = dateSelectList[indexPath.row]
         return cell
     }
+    
 }
 
