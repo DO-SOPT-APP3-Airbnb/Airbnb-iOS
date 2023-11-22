@@ -139,14 +139,13 @@
 			path = Where;
 			sourceTree = "<group>";
 		};
-		367DB4012B0DC7E800B91AC8 /* WhoView */ = {
+		367DB4012B0DC7E800B91AC8 /* WhoScene */ = {
 			isa = PBXGroup;
 			children = (
-				367DB4022B0DC83600B91AC8 /* WhoView.swift */,
-				367DB4042B0DC84D00B91AC8 /* WhoViewViewController.swift */,
-				367DB4062B0DD24B00B91AC8 /* AccompanyTableViewCell.swift */,
+				367DB42C2B0DFAE000B91AC8 /* Cells */,
+				367DB42A2B0DFACB00B91AC8 /* Views */,
 			);
-			path = WhoView;
+			path = WhoScene;
 			sourceTree = "<group>";
 		};
 		367DB4232B0DF3F200B91AC8 /* Helper */ = {
@@ -157,6 +156,30 @@
 				367DB4252B0DF3F200B91AC8 /* CalendarView.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		367DB42A2B0DFACB00B91AC8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				367DB4022B0DC83600B91AC8 /* WhoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		367DB42B2B0DFAD400B91AC8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				367DB4042B0DC84D00B91AC8 /* WhoViewViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		367DB42C2B0DFAE000B91AC8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				367DB4062B0DD24B00B91AC8 /* AccompanyTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		36F2E5452B0895CA00794274 /* Source */ = {
@@ -215,9 +238,10 @@
 		36F2E54A2B08969800794274 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				36F2E5782B0A5C5E00794274 /* WhenScene */,
 				34A8DE1D2B0DBEE100331C8D /* Where */,
-				367DB4012B0DC7E800B91AC8 /* WhoView */,
+				36F2E5782B0A5C5E00794274 /* WhenScene */,
+				367DB4012B0DC7E800B91AC8 /* WhoScene */,
+				367DB42B2B0DFAD400B91AC8 /* ViewControllers */,
 				36F2E5802B0A5F0100794274 /* Helper */,
 			);
 			path = Scenes;
