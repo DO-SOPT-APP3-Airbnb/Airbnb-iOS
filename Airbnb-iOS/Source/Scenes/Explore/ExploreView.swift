@@ -61,6 +61,32 @@ final class ExploreView: UIView {
         return imageView
     }()
 
+    ///테마 클릭
+    let themaUIView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .whiteWhite
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05).cgColor
+        view.layer.shadowOpacity = 1.0
+        view.layer.shadowOffset = CGSize.zero
+        view.layer.shadowRadius = 3
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+    }()
+
+    let themaCollectionView: UICollectionView = {
+        var layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.isScrollEnabled = false
+        collectionView.isUserInteractionEnabled = true
+        collectionView.register(ThemaCollectionViewCell.self, forCellWithReuseIdentifier: ThemaCollectionViewCell.identifier)
+        collectionView.backgroundColor = .whiteWhite
+
+        return collectionView
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -77,9 +103,10 @@ final class ExploreView: UIView {
     }
 
     func setHierarchy() {
-        self.addSubview(gotoTravelButton)
+        self.addSubviews(gotoTravelButton, themaUIView)
         gotoTravelButton.addSubview(gotoTravelView)
         gotoTravelView.addSubviews(searchImage, whereLabel, whenLabel, filterImage)
+        themaUIView.addSubview(themaCollectionView)
     }
 
     func setConstraints() {
@@ -108,6 +135,16 @@ final class ExploreView: UIView {
             $0.top.equalToSuperview().inset(10)
             $0.size.equalTo(36)
             $0.trailing.equalToSuperview().inset(15)
+        }
+        themaUIView.snp.makeConstraints {
+            $0.top.equalTo(gotoTravelButton.snp.bottom).offset(5)
+            $0.height.equalTo(72)
+            $0.leading.trailing.equalToSuperview()
+        }
+        themaCollectionView.snp.makeConstraints {
+            $0.top.bottom.equalToSuperview()
+            $0.width.equalTo(318)
+            $0.centerX.equalToSuperview()
         }
     }
 }
