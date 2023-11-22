@@ -30,6 +30,9 @@ class ImageLiteral {
     static let imgExplore = UIImage(named: "img_explore")!
     static let imgWhen = UIImage(named: "img_when")!
     static let imgWhere = UIImage(named: "img_whare")!
+    static let imgWho = UIImage(named: "img_who")!
+    
+    
     static let europe = UIImage(named: "europe")!
     static let global = UIImage(named: "global")!
     static let japan = UIImage(named: "japan")!
