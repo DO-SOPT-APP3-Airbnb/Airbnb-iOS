@@ -144,6 +144,7 @@
 			children = (
 				367DB42C2B0DFAE000B91AC8 /* Cells */,
 				367DB42A2B0DFACB00B91AC8 /* Views */,
+				367DB42B2B0DFAD400B91AC8 /* ViewControllers */,
 			);
 			path = WhoScene;
 			sourceTree = "<group>";
@@ -241,7 +242,6 @@
 				34A8DE1D2B0DBEE100331C8D /* Where */,
 				36F2E5782B0A5C5E00794274 /* WhenScene */,
 				367DB4012B0DC7E800B91AC8 /* WhoScene */,
-				367DB42B2B0DFAD400B91AC8 /* ViewControllers */,
 				36F2E5802B0A5F0100794274 /* Helper */,
 			);
 			path = Scenes;
