@@ -35,4 +35,6 @@ class ImageLiteral {
     static let btnPlus = UIImage(named: "btn_plus")!
     static let btnX = UIImage(named: "btn_x")!
     
+    static let imgWhere = UIImage(named: "img_whare")!
+    
 }
