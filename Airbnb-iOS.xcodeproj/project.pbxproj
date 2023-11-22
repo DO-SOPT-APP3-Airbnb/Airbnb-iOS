@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CEB9172B0868C30036A100 /* AppDelegate.swift */; };
 		02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CEB9192B0868C30036A100 /* SceneDelegate.swift */; };
-		02CEB91C2B0868C30036A100 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CEB91B2B0868C30036A100 /* ViewController.swift */; };
 		02CEB9212B0868C40036A100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9202B0868C40036A100 /* Assets.xcassets */; };
 		02CEB9242B0868C40036A100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9222B0868C40036A100 /* LaunchScreen.storyboard */; };
 		02CEB92D2B08806B0036A100 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 02CEB92C2B08806B0036A100 /* SnapKit */; };
+		34A8DE1F2B0DBF1000331C8D /* WhereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */; };
+		34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */; };
 		36F2E5512B08975200794274 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5502B08975200794274 /* A.swift */; };
 		36F2E5532B08975C00794274 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5522B08975C00794274 /* UIView+.swift */; };
 		36F2E5552B08976100794274 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5542B08976100794274 /* B.swift */; };
@@ -32,10 +33,11 @@
 		02CEB9142B0868C30036A100 /* Airbnb-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Airbnb-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CEB9172B0868C30036A100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02CEB9192B0868C30036A100 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		02CEB91B2B0868C30036A100 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02CEB9202B0868C40036A100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02CEB9232B0868C40036A100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02CEB9252B0868C40036A100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereViewController.swift; sourceTree = "<group>"; };
+		34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereCollectionViewCell.swift; sourceTree = "<group>"; };
 		36F2E5502B08975200794274 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
 		36F2E5522B08975C00794274 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36F2E5542B08976100794274 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
@@ -89,6 +91,15 @@
 			path = "Airbnb-iOS";
 			sourceTree = "<group>";
 		};
+		34A8DE1D2B0DBEE100331C8D /* Where */ = {
+			isa = PBXGroup;
+			children = (
+				34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */,
+				34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */,
+			);
+			path = Where;
+			sourceTree = "<group>";
+		};
 		36F2E5452B0895CA00794274 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +150,8 @@
 		36F2E54A2B08969800794274 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				34A8DE1D2B0DBEE100331C8D /* Where */,
 				36F2E5802B0A5F0100794274 /* Helper */,
-				02CEB91B2B0868C30036A100 /* ViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -272,8 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A8DE1F2B0DBF1000331C8D /* WhereViewController.swift in Sources */,
 				36F2E5552B08976100794274 /* B.swift in Sources */,
-				02CEB91C2B0868C30036A100 /* ViewController.swift in Sources */,
+				34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */,
 				02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
