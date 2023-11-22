@@ -20,6 +20,7 @@ class ImageLiteral {
     static let icExploreRoom = UIImage(named: "ic_explore_room")!
     static let icExploreSeashore = UIImage(named: "ic_explore_seashore")!
     static let icExploreTreehouse = UIImage(named: "ic_explore_treehouse")!
+    static let icPlusMinus = UIImage(named: "ic_+-")!
     
     static let icHeart = UIImage(named: "ic_heart")!
     static let icHeartFill = UIImage(named: "ic_heart_fill")!
@@ -27,6 +28,8 @@ class ImageLiteral {
     static let icExploreSearch = UIImage(named: "ic_explore_search")!
     
     static let imgExplore = UIImage(named: "img_explore")!
+    static let imgWhen = UIImage(named: "img_when")!
+    static let imgWhere = UIImage(named: "img_whare")!
     static let europe = UIImage(named: "europe")!
     static let global = UIImage(named: "global")!
     static let japan = UIImage(named: "japan")!
@@ -34,5 +37,6 @@ class ImageLiteral {
     static let btnMinus = UIImage(named: "btn_minus")!
     static let btnPlus = UIImage(named: "btn_plus")!
     static let btnX = UIImage(named: "btn_x")!
+    
     
 }
