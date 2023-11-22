@@ -17,6 +17,4 @@ SOPT 33기 합동세미나 Airbnb iOS
 2. SnapKit
     - Code base 개발을 원활하게 도와주는 라이브러리
 
-3. FSCalendar
-   - 캘린더 뷰 구현을 위한 라이브러리 
 ~~~
