@@ -17,7 +17,6 @@ class CustomNavigationView: UIView {
     
     // MARK: - Variables
     // MARK: Constants
-    
     // MARK: Property
     var progressLevel: Float = 0.0
     

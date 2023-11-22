@@ -29,6 +29,7 @@ class ImageLiteral {
     
     static let imgExplore = UIImage(named: "img_explore")!
     static let imgWhen = UIImage(named: "img_when")!
+    static let imgWhere = UIImage(named: "img_whare")!
     static let europe = UIImage(named: "europe")!
     static let global = UIImage(named: "global")!
     static let japan = UIImage(named: "japan")!
@@ -36,5 +37,6 @@ class ImageLiteral {
     static let btnMinus = UIImage(named: "btn_minus")!
     static let btnPlus = UIImage(named: "btn_plus")!
     static let btnX = UIImage(named: "btn_x")!
+    
     
 }
