@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02222F832B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02222F822B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift */; };
 		02292C012B0BB66B00F41698 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C002B0BB66B00F41698 /* ExploreView.swift */; };
 		02292C032B0BB68100F41698 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C022B0BB68100F41698 /* ExploreViewController.swift */; };
 		02292C062B0C5A1200F41698 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C052B0C5A1200F41698 /* TabBarItem.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02222F822B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCollectionViewCell.swift; sourceTree = "<group>"; };
 		02292C002B0BB66B00F41698 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		02292C022B0BB68100F41698 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		02292C052B0C5A1200F41698 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
@@ -106,9 +108,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02222F812B0DBF5900FC64F6 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				02222F822B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		02292BFF2B0BB40100F41698 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				02222F812B0DBF5900FC64F6 /* cell */,
 				02292C002B0BB66B00F41698 /* ExploreView.swift */,
 				02292C022B0BB68100F41698 /* ExploreViewController.swift */,
 			);
@@ -422,6 +433,7 @@
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
 				3686A6C92B0CB2840072261D /* (null) in Sources */,
 				02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */,
+				02222F832B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift in Sources */,
 				36F2E5512B08975200794274 /* A.swift in Sources */,
 				36F2E55B2B08979F00794274 /* Font.swift in Sources */,
 				36F2E5842B0A61B900794274 /* UIStackView+.swift in Sources */,
