@@ -14,6 +14,7 @@ class WhoViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setNavigationBar()
     }
     
     private func setUI(){
@@ -29,6 +30,10 @@ class WhoViewViewController: UIViewController {
         whoView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    private func setNavigationBar() {
+        navigationController?.navigationBar.isHidden = true
     }
 
 }

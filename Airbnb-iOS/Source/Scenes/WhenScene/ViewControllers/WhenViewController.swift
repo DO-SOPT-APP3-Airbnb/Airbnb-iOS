@@ -56,7 +56,7 @@ class WhenViewController: UIViewController {
     
     // MARK: Objc Function
     @objc func nextButtonDidTap() {
-        print("tap")
+        navigationController?.pushViewController(WhoViewViewController(), animated: true)
     }
     
 }
