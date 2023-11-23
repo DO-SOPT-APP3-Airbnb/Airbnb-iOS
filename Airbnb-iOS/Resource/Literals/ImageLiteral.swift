@@ -20,10 +20,8 @@ class ImageLiteral {
     static let icExploreSeashore = UIImage(named: "ic_explore_seashore")!.withRenderingMode(.alwaysTemplate)
     static let icExploreTreehouse = UIImage(named: "ic_explore_treehouse")!.withRenderingMode(.alwaysTemplate)
     static let icExploreMap = UIImage(named: "ic_explore_map")!
-    static let icExploreRoom = UIImage(named: "ic_explore_room")!
-    static let icExploreSeashore = UIImage(named: "ic_explore_seashore")!
-    static let icExploreTreehouse = UIImage(named: "ic_explore_treehouse")!
-    
+    static let icPlusMinus = UIImage(named: "ic_+-")!
+
     static let icHeart = UIImage(named: "ic_heart")!
     static let icHeartFill = UIImage(named: "ic_heart_fill")!
     
