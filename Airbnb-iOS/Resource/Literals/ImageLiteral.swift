@@ -24,7 +24,9 @@ class ImageLiteral {
 
     static let icHeart = UIImage(named: "ic_heart")!
     static let icHeartFill = UIImage(named: "ic_heart_fill")!
-    
+
+    static let icSharpStar = UIImage(named: "ic_sharp_star")!
+
     static let icExploreSearch = UIImage(named: "ic_explore_search")!
     
     static let imgExplore = UIImage(named: "img_explore")!
