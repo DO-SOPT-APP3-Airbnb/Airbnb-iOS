@@ -22,6 +22,8 @@ final class ExploreViewController: UIViewController {
 
         exploreView.themaCollectionView.delegate = self
         exploreView.themaCollectionView.dataSource = self
+        exploreView.themaCardCollectionView.delegate = self
+        exploreView.themaCardCollectionView.dataSource = self
 
         setUI()
     }
@@ -45,28 +47,61 @@ final class ExploreViewController: UIViewController {
 extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout,
                                  UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return themaLables.count
+        if collectionView == exploreView.themaCollectionView {
+            return themaLables.count
+        } else {
+            return 5
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemaCollectionViewCell.identifier, for: indexPath) as! ThemaCollectionViewCell
-        cell.themaIcon.image = tnemaIcons[indexPath.row]
-        cell.themaLabel.text = themaLables[indexPath.row]
-        // deafault 선택: 통나무집
-        exploreView.themaCollectionView.selectItem(at: [0,0], animated: false, scrollPosition: .init())
-
-        return cell
+        if collectionView == exploreView.themaCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemaCollectionViewCell.identifier, for: indexPath) as! ThemaCollectionViewCell
+            cell.themaIcon.image = tnemaIcons[indexPath.row]
+            cell.themaLabel.text = themaLables[indexPath.row]
+            // deafault 선택: 통나무집
+            exploreView.themaCollectionView.selectItem(at: [0,0], animated: false, scrollPosition: .init())
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThemaCardCollectionViewCell.identifier, for: indexPath) as! ThemaCardCollectionViewCell
+            // data binding
+            return cell
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 31
+        if collectionView == exploreView.themaCollectionView {
+            return 31
+        } else {
+            return 8
+        }
     }
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 54, height: 72)
+        if collectionView == exploreView.themaCollectionView {
+            return CGSize(width: 54, height: 72)
+        } else {
+            return CGSize(width: 348, height: 464)
+        }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == exploreView.themaCardCollectionView {
+            let deviceWidth = UIScreen.main.bounds.width
+            if section == 0 {
+                // 가운데 위치 시키도록 (현재 디바이스의 width-cell.width)/2를 inset으로 지정
+                return UIEdgeInsets(top: 0, left: (deviceWidth-348)/2, bottom: 0, right: 14)
+            } else {
+                return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            }
+        }
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = indexPath.row
-        print("클릭: \(index)")
+        if collectionView == exploreView.themaCollectionView {
+            print("클릭: \(themaLables[index])")
+        }
     }
 }
