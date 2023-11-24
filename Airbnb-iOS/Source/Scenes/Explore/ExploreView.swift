@@ -87,6 +87,54 @@ final class ExploreView: UIView {
         return collectionView
     }()
 
+    let themaCardCollectionView: UICollectionView = {
+        var layout = CustomCollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 348, height: 464)
+        layout.scrollDirection = .horizontal
+
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(ThemaCardCollectionViewCell.self, forCellWithReuseIdentifier: ThemaCardCollectionViewCell.identifier)
+        collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.decelerationRate = .fast
+        collectionView.isPagingEnabled = false
+
+        return collectionView
+    }()
+
+    let pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.hidesForSinglePage = true
+        pageControl.numberOfPages = 5
+        pageControl.pageIndicatorTintColor = .lightGray
+
+        return pageControl
+    }()
+
+    let mapButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .black1
+        button.layer.cornerRadius = 22
+
+        return button
+    }()
+
+    private let mapLabel: UILabel = {
+        let label = UILabel ()
+        label.text = "지도"
+        label.textColor = .white
+        label.font = .iosSubMedium15
+
+        return label
+    }()
+
+    private let mapImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = ImageLiteral.icExploreMap
+
+        return imageView
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -103,15 +151,17 @@ final class ExploreView: UIView {
     }
 
     func setHierarchy() {
-        self.addSubviews(gotoTravelButton, themaUIView)
+        self.addSubviews(gotoTravelButton, themaUIView, themaCardCollectionView, mapButton)
         gotoTravelButton.addSubview(gotoTravelView)
         gotoTravelView.addSubviews(searchImage, whereLabel, whenLabel, filterImage)
         themaUIView.addSubview(themaCollectionView)
+        themaCardCollectionView.addSubview(pageControl)
+        mapButton.addSubviews(mapLabel, mapImage)
     }
 
     func setConstraints() {
         gotoTravelButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(62)
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(-38)
             $0.height.equalTo(56)
             $0.leading.trailing.equalToSuperview().inset(13)
         }
@@ -145,6 +195,30 @@ final class ExploreView: UIView {
             $0.top.bottom.equalToSuperview()
             $0.width.equalTo(318)
             $0.centerX.equalToSuperview()
+        }
+        themaCardCollectionView.snp.makeConstraints {
+            $0.top.equalTo(themaCollectionView.snp.bottom).offset(12)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(464)
+        }
+        pageControl.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(13)
+        }
+        mapButton.snp.makeConstraints {
+            $0.top.equalTo(themaCardCollectionView.snp.bottom).offset(11)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(100)
+            $0.height.equalTo(44)
+        }
+        mapLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(14)
+            $0.leading.equalToSuperview().inset(18)
+        }
+        mapImage.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(11)
+            $0.trailing.equalToSuperview().inset(23)
+            $0.size.equalTo(24)
         }
     }
 }

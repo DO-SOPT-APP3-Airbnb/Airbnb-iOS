@@ -12,6 +12,8 @@
 		02292C032B0BB68100F41698 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C022B0BB68100F41698 /* ExploreViewController.swift */; };
 		02292C062B0C5A1200F41698 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C052B0C5A1200F41698 /* TabBarItem.swift */; };
 		02292C082B0C5BA400F41698 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02292C072B0C5BA400F41698 /* TabBarController.swift */; };
+		023F10692B0F16F5006848B7 /* ThemaCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F10682B0F16F5006848B7 /* ThemaCardCollectionViewCell.swift */; };
+		023F106B2B0F3A61006848B7 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023F106A2B0F3A61006848B7 /* CustomCollectionViewFlowLayout.swift */; };
 		02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CEB9172B0868C30036A100 /* AppDelegate.swift */; };
 		02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CEB9192B0868C30036A100 /* SceneDelegate.swift */; };
 		02CEB9212B0868C40036A100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9202B0868C40036A100 /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		02292C022B0BB68100F41698 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		02292C052B0C5A1200F41698 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		02292C072B0C5BA400F41698 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		023F10682B0F16F5006848B7 /* ThemaCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		023F106A2B0F3A61006848B7 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		02CEB9142B0868C30036A100 /* Airbnb-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Airbnb-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CEB9172B0868C30036A100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02CEB9192B0868C30036A100 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,18 +112,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02222F812B0DBF5900FC64F6 /* cell */ = {
+		02222F812B0DBF5900FC64F6 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				02222F822B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift */,
+				023F10682B0F16F5006848B7 /* ThemaCardCollectionViewCell.swift */,
 			);
-			path = cell;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		02292BFF2B0BB40100F41698 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				02222F812B0DBF5900FC64F6 /* cell */,
+				023F106C2B0F3B9B006848B7 /* Layout */,
+				02222F812B0DBF5900FC64F6 /* Cell */,
 				02292C002B0BB66B00F41698 /* ExploreView.swift */,
 				02292C022B0BB68100F41698 /* ExploreViewController.swift */,
 			);
@@ -133,6 +139,14 @@
 				02292C072B0C5BA400F41698 /* TabBarController.swift */,
 			);
 			path = TapBar;
+			sourceTree = "<group>";
+		};
+		023F106C2B0F3B9B006848B7 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				023F106A2B0F3A61006848B7 /* CustomCollectionViewFlowLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		02CEB90B2B0868C30036A100 = {
@@ -415,7 +429,7 @@
 				367DB40B2B0DF32600B91AC8 /* DateSelectCollectionViewCell.swift in Sources */,
 				367DB4102B0DF37F00B91AC8 /* WhenView.swift in Sources */,
 				02292C032B0BB68100F41698 /* ExploreViewController.swift in Sources */,
-				02CEB91C2B0868C30036A100 /* ViewController.swift in Sources */,
+				023F10692B0F16F5006848B7 /* ThemaCardCollectionViewCell.swift in Sources */,
 				02CEB9182B0868C30036A100 /* AppDelegate.swift in Sources */,
 				3686A6D12B0D0BE20072261D /* (null) in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
@@ -430,6 +444,7 @@
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
 				02292C082B0C5BA400F41698 /* TabBarController.swift in Sources */,
 				02292C062B0C5A1200F41698 /* TabBarItem.swift in Sources */,
+				023F106B2B0F3A61006848B7 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
 				3686A6C92B0CB2840072261D /* (null) in Sources */,
 				02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */,
