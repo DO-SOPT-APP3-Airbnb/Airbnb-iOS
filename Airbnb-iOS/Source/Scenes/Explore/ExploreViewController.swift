@@ -104,4 +104,9 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDeleg
             print("클릭: \(themaLables[index])")
         }
     }
+
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let page = Int(targetContentOffset.pointee.x / 348)
+        exploreView.pageControl.currentPage = page
+      }
 }
