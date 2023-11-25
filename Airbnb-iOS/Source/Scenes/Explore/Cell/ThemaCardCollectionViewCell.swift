@@ -12,6 +12,8 @@ import SnapKit
 final class ThemaCardCollectionViewCell: UICollectionViewCell {
     static let identifier = "ThemaCardCollectionViewCell"
 
+    private var isButtonClicked: Bool = false
+
     let themaCard: UIImageView = {
         let imageview = UIImageView()
         imageview.image = ImageLiteral.imgExplore
@@ -34,10 +36,21 @@ final class ThemaCardCollectionViewCell: UICollectionViewCell {
     let heartButton: UIButton = {
         let button = UIButton()
         button.setImage(ImageLiteral.icHeart, for: .normal)
-        button.setImage(ImageLiteral.icHeartFill, for: .selected)
+        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
 
         return button
     }()
+
+    // 버튼 클릭시 이미지 변경
+    @objc func buttonClicked() {
+        if isButtonClicked == false {
+            heartButton.setImage(ImageLiteral.icHeartFill, for: .normal)
+            isButtonClicked = true
+        } else {
+            heartButton.setImage(ImageLiteral.icHeart, for: .normal)
+            isButtonClicked = false
+        }
+    }
 
     let distanceLabel: UILabel = {
         let label = UILabel()
