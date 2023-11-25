@@ -13,15 +13,15 @@ class ImageLiteral {
     static let icExploreBtmSearch = UIImage(named: "ic_explore_btm_search")!
     static let icExploreBtmTrip = UIImage(named: "ic_explore_btm_trip")!
     static let icExploreBtmWishlist = UIImage(named: "ic_explore_btm_wishlist")!
-    
+
     static let icExploreFiltering = UIImage(named: "ic_explore_filtering")!
-    static let icExploreGoodview = UIImage(named: "ic_explore_goodview")!
+    static let icExploreGoodview = UIImage(named: "ic_explore_goodview")!.withRenderingMode(.alwaysTemplate)
+    static let icExploreRoom = UIImage(named: "ic_explore_room")!.withRenderingMode(.alwaysTemplate)
+    static let icExploreSeashore = UIImage(named: "ic_explore_seashore")!.withRenderingMode(.alwaysTemplate)
+    static let icExploreTreehouse = UIImage(named: "ic_explore_treehouse")!.withRenderingMode(.alwaysTemplate)
     static let icExploreMap = UIImage(named: "ic_explore_map")!
-    static let icExploreRoom = UIImage(named: "ic_explore_room")!
-    static let icExploreSeashore = UIImage(named: "ic_explore_seashore")!
-    static let icExploreTreehouse = UIImage(named: "ic_explore_treehouse")!
     static let icPlusMinus = UIImage(named: "ic_+-")!
-    
+
     static let icHeart = UIImage(named: "ic_heart")!
     static let icHeartFill = UIImage(named: "ic_heart_fill")!
     
