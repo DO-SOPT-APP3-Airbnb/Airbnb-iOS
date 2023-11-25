@@ -104,9 +104,9 @@ final class ExploreView: UIView {
 
     let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
-        pageControl.hidesForSinglePage = true
         pageControl.numberOfPages = 5
-        pageControl.pageIndicatorTintColor = .lightGray
+        pageControl.pageIndicatorTintColor = .whiteWhite40
+        pageControl.currentPageIndicatorTintColor = .whiteWhite
 
         return pageControl
     }()
@@ -151,11 +151,11 @@ final class ExploreView: UIView {
     }
 
     func setHierarchy() {
-        self.addSubviews(gotoTravelButton, themaUIView, themaCardCollectionView, mapButton)
+        self.addSubviews(gotoTravelButton, themaUIView, themaCardCollectionView, pageControl, mapButton)
         gotoTravelButton.addSubview(gotoTravelView)
         gotoTravelView.addSubviews(searchImage, whereLabel, whenLabel, filterImage)
         themaUIView.addSubview(themaCollectionView)
-        themaCardCollectionView.addSubview(pageControl)
+        //themaCardCollectionView.addSubview(pageControl)
         mapButton.addSubviews(mapLabel, mapImage)
     }
 
@@ -203,7 +203,7 @@ final class ExploreView: UIView {
         }
         pageControl.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(13)
+            $0.bottom.equalTo(themaCardCollectionView.snp.bottom).inset(14)
         }
         mapButton.snp.makeConstraints {
             $0.top.equalTo(themaCardCollectionView.snp.bottom).offset(11)
