@@ -17,6 +17,9 @@ class SegmentButton: UIButton {
                 self.makeCornerRound(radius: 18.adjustedHeight)
                 self.makeBorder(width: 1, color: .grayGrayLine)
                 // 그림자 필요
+            } else {
+                self.backgroundColor = .clear
+                self.makeBorder(width: 0, color: .white)
             }
         }
     }

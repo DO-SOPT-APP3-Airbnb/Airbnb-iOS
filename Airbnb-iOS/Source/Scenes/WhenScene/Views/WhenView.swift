@@ -198,10 +198,20 @@ class WhenView: UIView {
             if i == 0 {
                 button.isSelect = true
             }
+            button.addTarget(self, action: #selector(tapSegmentButton), for: .touchUpInside)
             optionSelectButtonStackView.addArrangedSubview(button)
         }
     }
     // MARK: Objc Function
+    @objc func tapSegmentButton(sender: SegmentButton) {
+        if sender.isSelect == false {
+            sender.isSelect = true
+            
+        } else {
+            sender.isSelect = false
+        }
+        print("ddd")
+    }
 }
 
 // MARK: - Extension
