@@ -502,6 +502,7 @@
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
 				02292C082B0C5BA400F41698 /* TabBarController.swift in Sources */,
 				02292C062B0C5A1200F41698 /* TabBarItem.swift in Sources */,
+				360506DE2B14905300F0A7E3 /* CalendarDateFormatter.swift in Sources */,
 				023F106B2B0F3A61006848B7 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
 				3686A6C92B0CB2840072261D /* (null) in Sources */,
