@@ -9,7 +9,8 @@ import Foundation
 
 enum NetworkError: Int, Error, CustomStringConvertible {
     var description: String { self.errorDescription }
-    case requstEncodingError
+    case pathErr
+    case requestEncodingError
     case responseDecodingError
     case responseError
     case unknownError
@@ -18,7 +19,8 @@ enum NetworkError: Int, Error, CustomStringConvertible {
     
     var errorDescription: String {
         switch self {
-        case .requstEncodingError: return "REQUEST_ENCODING_ERROR"
+        case .pathErr: return "PATH_ERROR"
+        case .requestEncodingError: return "REQUEST_ENCODING_ERROR"
         case .responseError: return "RESPONSE_ERROR"
         case .responseDecodingError: return "RESPONSE_DECODING_ERROR"
         case .unknownError: return "UNKNOWN_ERROR"
