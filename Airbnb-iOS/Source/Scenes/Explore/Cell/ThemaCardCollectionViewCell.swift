@@ -28,7 +28,6 @@ final class ThemaCardCollectionViewCell: UICollectionViewCell {
         label.textAlignment = .left
         label.textColor = .whiteWhite
         label.font = .iosTitleSemi32
-        label.textAlignment = .center
 
         return label
     }()
@@ -98,6 +97,14 @@ final class ThemaCardCollectionViewCell: UICollectionViewCell {
 
         return label
     }()
+
+    func setThemaCard(title: String, distance: String, date: String, cost: String, star: String) {
+        titleLabel.text = title
+        distanceLabel.text = "\(distance)km 거리"
+        dateLabel.text = date
+        costLabel.text = "₩\(cost) /박"
+        starLabel.text = star
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
