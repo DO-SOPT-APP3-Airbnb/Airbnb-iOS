@@ -26,8 +26,15 @@ final class ExploreViewController: UIViewController {
         exploreView.themaCardCollectionView.dataSource = self
         
         setUI()
+        addTarget()
+
+        self.navigationController?.isNavigationBarHidden = true
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+
     func setUI() {
         setHierarchy()
         setConstraints()
@@ -41,6 +48,17 @@ final class ExploreViewController: UIViewController {
         exploreView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+
+    private func addTarget() {
+        exploreView.gotoTravelButton.addTarget(self, action: #selector(nextButtonDidTap), for: .touchUpInside)
+    }
+
+    // MARK: Objc Function
+    @objc func nextButtonDidTap() {
+        self.tabBarController?.tabBar.isHidden = true
+        let nextVC = WhereViewController()
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
