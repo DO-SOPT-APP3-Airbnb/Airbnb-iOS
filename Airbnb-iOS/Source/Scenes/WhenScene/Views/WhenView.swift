@@ -204,13 +204,13 @@ class WhenView: UIView {
     }
     // MARK: Objc Function
     @objc func tapSegmentButton(sender: SegmentButton) {
-        if sender.isSelect == false {
-            sender.isSelect = true
-            
-        } else {
-            sender.isSelect = false
+        optionSelectButtonStackView.arrangedSubviews.forEach {
+            $0.backgroundColor = .clear
+            $0.makeBorder(width: 0, color: .black1)
+            let button = $0 as? SegmentButton
+            button?.isSelect = false
         }
-        print("ddd")
+        sender.isSelect = true
     }
 }
 
