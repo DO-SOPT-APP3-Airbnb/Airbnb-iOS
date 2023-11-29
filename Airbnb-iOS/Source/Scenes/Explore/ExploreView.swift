@@ -12,7 +12,7 @@ import SnapKit
 final class ExploreView: UIView {
     // MARK: - Properties
     ///WhereView로 넘어가는 버튼
-    private let gotoTravelButton: UIButton = {
+    let gotoTravelButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .whiteWhite
         button.layer.cornerRadius = 29.5
@@ -152,20 +152,16 @@ final class ExploreView: UIView {
     
     func setHierarchy() {
         self.addSubviews(gotoTravelButton, themaUIView, themaCardCollectionView, pageControl, mapButton)
-        gotoTravelButton.addSubview(gotoTravelView)
-        gotoTravelView.addSubviews(searchImage, whereLabel, whenLabel, filterImage)
+        gotoTravelButton.addSubviews(searchImage, whereLabel, whenLabel, filterImage)
         themaUIView.addSubview(themaCollectionView)
         mapButton.addSubviews(mapLabel, mapImage)
     }
     
     func setConstraints() {
         gotoTravelButton.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(-38)
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top)
             $0.height.equalTo(56)
             $0.leading.trailing.equalToSuperview().inset(13)
-        }
-        gotoTravelView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
         }
         searchImage.snp.makeConstraints {
             $0.top.equalToSuperview().inset(14)
