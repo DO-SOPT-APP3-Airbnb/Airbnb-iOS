@@ -19,6 +19,11 @@
 		02CEB9212B0868C40036A100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9202B0868C40036A100 /* Assets.xcassets */; };
 		02CEB9242B0868C40036A100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9222B0868C40036A100 /* LaunchScreen.storyboard */; };
 		02CEB92D2B08806B0036A100 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 02CEB92C2B08806B0036A100 /* SnapKit */; };
+		02FF7D692B1726B500983D07 /* ThemaCardDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */; };
+		02FF7D6B2B1726E800983D07 /* themaCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6A2B1726E800983D07 /* themaCardService.swift */; };
+		02FF7D6D2B17353E00983D07 /* ThemaCardImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */; };
+		02FF7D6F2B17359500983D07 /* themaCardImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6E2B17359500983D07 /* themaCardImageService.swift */; };
+		02FF7D712B17373600983D07 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D702B17373600983D07 /* UIImage+.swift */; };
 		34A8DE1F2B0DBF1000331C8D /* WhereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */; };
 		34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */; };
 		360506E02B15C0EC00F0A7E3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */; };
@@ -75,6 +80,11 @@
 		02CEB9202B0868C40036A100 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02CEB9232B0868C40036A100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02CEB9252B0868C40036A100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCardDTO.swift; sourceTree = "<group>"; };
+		02FF7D6A2B1726E800983D07 /* themaCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themaCardService.swift; sourceTree = "<group>"; };
+		02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCardImageDTO.swift; sourceTree = "<group>"; };
+		02FF7D6E2B17359500983D07 /* themaCardImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themaCardImageService.swift; sourceTree = "<group>"; };
+		02FF7D702B17373600983D07 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereViewController.swift; sourceTree = "<group>"; };
 		34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereCollectionViewCell.swift; sourceTree = "<group>"; };
 		360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -188,6 +198,15 @@
 			path = "Airbnb-iOS";
 			sourceTree = "<group>";
 		};
+		02FF7D672B1726A700983D07 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */,
+				02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		34A8DE1D2B0DBEE100331C8D /* Where */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +300,7 @@
 				367DB4192B0DF39900B91AC8 /* UIStackView+.swift */,
 				36F2E5832B0A61B900794274 /* UIStackView+.swift */,
 				36F2E5872B0A746D00794274 /* UILabel+.swift */,
+				02FF7D702B17373600983D07 /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -296,9 +316,12 @@
 		36F2E5492B08968B00794274 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				02FF7D672B1726A700983D07 /* DTO */,
 				36F2E5542B08976100794274 /* B.swift */,
 				360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */,
 				360506E12B15C13000F0A7E3 /* Config.swift */,
+				02FF7D6A2B1726E800983D07 /* themaCardService.swift */,
+				02FF7D6E2B17359500983D07 /* themaCardImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -484,6 +507,7 @@
 				02292C012B0BB66B00F41698 /* ExploreView.swift in Sources */,
 				360506F02B1716D000F0A7E3 /* CalendarDateFormatter.swift in Sources */,
 				36F2E5552B08976100794274 /* B.swift in Sources */,
+				02FF7D6D2B17353E00983D07 /* ThemaCardImageDTO.swift in Sources */,
 				367DB40B2B0DF32600B91AC8 /* DateSelectCollectionViewCell.swift in Sources */,
 				367DB4102B0DF37F00B91AC8 /* WhenView.swift in Sources */,
 				02292C032B0BB68100F41698 /* ExploreViewController.swift in Sources */,
@@ -496,8 +520,11 @@
 				3686A6C52B0CA07F0072261D /* (null) in Sources */,
 				367DB41F2B0DF39900B91AC8 /* Adjust+.swift in Sources */,
 				367DB4122B0DF38600B91AC8 /* WhenViewController.swift in Sources */,
+				02FF7D692B1726B500983D07 /* ThemaCardDTO.swift in Sources */,
 				367DB41D2B0DF39900B91AC8 /* String+.swift in Sources */,
+				02FF7D6B2B1726E800983D07 /* themaCardService.swift in Sources */,
 				367DB4272B0DF3F200B91AC8 /* CalendarView.swift in Sources */,
+				02FF7D6F2B17359500983D07 /* themaCardImageService.swift in Sources */,
 				34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
 				02292C082B0C5BA400F41698 /* TabBarController.swift in Sources */,
@@ -508,6 +535,7 @@
 				367DB4072B0DD24B00B91AC8 /* AccompanyTableViewCell.swift in Sources */,
 				367DB4032B0DC83600B91AC8 /* WhoView.swift in Sources */,
 				02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */,
+				02FF7D712B17373600983D07 /* UIImage+.swift in Sources */,
 				02222F832B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift in Sources */,
 				360506E22B15C13000F0A7E3 /* Config.swift in Sources */,
 				36F2E5512B08975200794274 /* A.swift in Sources */,
