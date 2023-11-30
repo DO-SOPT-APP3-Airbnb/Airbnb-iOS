@@ -504,7 +504,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				367DB4202B0DF39900B91AC8 /* UIStackView+.swift in Sources */,
 				34A8DE1F2B0DBF1000331C8D /* WhereViewController.swift in Sources */,
 				02292C012B0BB66B00F41698 /* ExploreView.swift in Sources */,
 				360506F02B1716D000F0A7E3 /* CalendarDateFormatter.swift in Sources */,
