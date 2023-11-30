@@ -9,7 +9,7 @@ import Foundation
 
 class themaCardService {
     func getThemaCard(id: Int, completion: @escaping (Result<ThemaCardDTO, NetworkError>) -> Void) {
-        let url = URL(string: "")
+        let url = URL(string: "\(Config.baseURL)/api/dormitory/\(id)")
 
         guard let url = url else {
             return completion(.failure(.pathErr))
