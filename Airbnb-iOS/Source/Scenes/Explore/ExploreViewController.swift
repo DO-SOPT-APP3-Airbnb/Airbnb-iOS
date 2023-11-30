@@ -18,6 +18,7 @@ final class ExploreViewController: UIViewController {
 
     var themaCardInfo: ThemaCardDTO?
     var themaCardImage: ThemaCardImageDTO?
+    var scrollOffset: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,7 +137,12 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDeleg
     }
 
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let page = Int(targetContentOffset.pointee.x / 348)
+        var page = Int(targetContentOffset.pointee.x / 348)
+        if scrollOffset {
+            targetContentOffset.pointee.x = 0.0
+            page = 0
+            self.scrollOffset = false
+        }
         print("===page: \(page)")
         print("===targetContentOffset: \(targetContentOffset.pointee.x)")
         exploreView.pageControl.currentPage = page
@@ -149,7 +155,7 @@ extension ExploreViewController {
             switch result {
             case .success(let themaCardResponse):
                 self.themaCardInfo = themaCardResponse
-                if let themaCardInfo = self.themaCardInfo {
+                if self.themaCardInfo != nil {
                     self.getThemaCardImage(id: id)
                 } else {
                     print("RESPONSE ERROR")
@@ -165,12 +171,13 @@ extension ExploreViewController {
             switch result {
             case .success(let themaCardImageResponse):
                 self.themaCardImage = themaCardImageResponse
-                if let themaCardImage = self.themaCardImage {
+                if self.themaCardImage != nil {
                     DispatchQueue.main.async {
                         self.exploreView.themaCardCollectionView.reloadData()
                         if self.themaCardInfo?.data.count ?? 0 > 0 {
-                            // self.exploreView.themaCardCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: false)
-                            // self.exploreView.themaCardCollectionView.setContentOffset(.zero, animated: false)
+                            self.exploreView.themaCardCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
+                            //self.exploreView.themaCardCollectionView.setContentOffset(.zero, animated: false)
+                            //self.scrollOffset = true
                         }
                     }
                 } else {
