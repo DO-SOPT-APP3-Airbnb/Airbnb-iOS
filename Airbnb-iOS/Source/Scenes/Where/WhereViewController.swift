@@ -107,7 +107,10 @@ extension WhereViewController: UICollectionViewDataSource{
     
 }
 extension WhereViewController: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextViewConroller = WhenViewController()
+        navigationController?.pushViewController(nextViewConroller, animated: false)
+    }
 }
 
 extension WhereViewController {
