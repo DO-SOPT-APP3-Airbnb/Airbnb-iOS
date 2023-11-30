@@ -17,6 +17,8 @@ class CustomNavigationView: UIView {
     
     // MARK: - Variables
     // MARK: Constants
+    let isLongerView = UIScreen.main.isLongerThan812pt
+    
     // MARK: Property
     var progressLevel: Float = 0.0
     
@@ -90,43 +92,72 @@ class CustomNavigationView: UIView {
     
     // MARK: Layout Helpers
     private func setUI(){
-        setStyle()
-        setLayout()
+        setViewHierarchy()
+        setConstraints()
     }
     
-    private func setStyle() { }
-    
-    private func setLayout() {
+    private func setViewHierarchy() {
         self.addSubviews(xButton, labelStackView, selectLineView, progressBarView)
-        
-        self.snp.makeConstraints {
-            $0.height.equalTo(128.adjustedHeight)
+    }
+    
+    private func setConstraints() {
+        if isLongerView {
+            self.snp.makeConstraints {
+                $0.height.equalTo(128.adjustedHeight)
+            }
+            
+            xButton.snp.makeConstraints {
+                $0.top.equalToSuperview().offset(57.adjusted)
+                $0.leading.equalToSuperview().offset(16.adjusted)
+                $0.size.equalTo(42.adjusted)
+            }
+            
+            selectLineView.snp.makeConstraints {
+                $0.top.equalTo(lodgingLabel.snp.bottom).offset(5)
+                $0.centerX.equalTo(lodgingLabel.snp.centerX)
+                $0.height.equalTo(2.adjustedHeight)
+                $0.width.equalTo(lodgingLabel.snp.width)
+            }
+            
+            labelStackView.snp.makeConstraints {
+                $0.centerY.equalTo(xButton.snp.centerY)
+                $0.centerX.equalToSuperview()
+            }
+            
+            progressBarView.snp.makeConstraints {
+                $0.height.equalTo(8.adjustedHeight)
+                $0.bottom.equalToSuperview()
+                $0.leading.trailing.equalToSuperview().inset(21.adjusted)
+            }
+        } else {
+            self.snp.makeConstraints {
+                $0.height.equalTo(110.adjustedHeight)
+            }
+            
+            xButton.snp.makeConstraints {
+                $0.top.equalToSuperview().offset(49.adjusted)
+                $0.leading.equalToSuperview().offset(14.adjusted)
+                $0.size.equalTo(36.adjusted)
+            }
+            
+            selectLineView.snp.makeConstraints {
+                $0.top.equalTo(lodgingLabel.snp.bottom).offset(5)
+                $0.centerX.equalTo(lodgingLabel.snp.centerX)
+                $0.height.equalTo(2.adjustedHeight)
+                $0.width.equalTo(lodgingLabel.snp.width)
+            }
+            
+            labelStackView.snp.makeConstraints {
+                $0.centerY.equalTo(xButton.snp.centerY)
+                $0.centerX.equalToSuperview()
+            }
+            
+            progressBarView.snp.makeConstraints {
+                $0.height.equalTo(6.adjustedHeight)
+                $0.bottom.equalToSuperview()
+                $0.leading.trailing.equalToSuperview().inset(18.adjusted)
+            }
         }
-        
-        xButton.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(57.adjusted)
-            $0.leading.equalToSuperview().offset(16.adjusted)
-            $0.size.equalTo(42.adjusted)
-        }
-        
-        selectLineView.snp.makeConstraints {
-            $0.top.equalTo(lodgingLabel.snp.bottom).offset(5)
-            $0.centerX.equalTo(lodgingLabel.snp.centerX)
-            $0.height.equalTo(2.adjustedHeight)
-            $0.width.equalTo(lodgingLabel.snp.width)
-        }
-        
-        labelStackView.snp.makeConstraints {
-            $0.centerY.equalTo(xButton.snp.centerY)
-            $0.centerX.equalToSuperview()
-        }
-        
-        progressBarView.snp.makeConstraints {
-            $0.height.equalTo(8.adjustedHeight)
-            $0.bottom.equalToSuperview()
-            $0.leading.trailing.equalToSuperview().inset(21.adjusted)
-        }
-        
     }
     // MARK: Custom Function
     /// darkMode가 필요할 때 변경하는 함수입니다. 기본은 라이트모드
