@@ -24,12 +24,17 @@ class ImageLiteral {
 
     static let icHeart = UIImage(named: "ic_heart")!
     static let icHeartFill = UIImage(named: "ic_heart_fill")!
-    
+
+    static let icSharpStar = UIImage(named: "ic_sharp_star")!
+
     static let icExploreSearch = UIImage(named: "ic_explore_search")!
     
     static let imgExplore = UIImage(named: "img_explore")!
     static let imgWhen = UIImage(named: "img_when")!
     static let imgWhere = UIImage(named: "img_whare")!
+    static let imgWho = UIImage(named: "img_who")!
+    
+    
     static let europe = UIImage(named: "europe")!
     static let global = UIImage(named: "global")!
     static let japan = UIImage(named: "japan")!
