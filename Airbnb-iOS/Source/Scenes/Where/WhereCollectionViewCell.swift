@@ -15,8 +15,10 @@ final class WhereCollectionViewCell: UICollectionViewCell {
     private let imageView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "global")
+        view.contentMode = .scaleAspectFit
         return view
     }()
+    
     private let whereLabel: UILabel = {
         let label = UILabel()
         label.text = "전 세계 어디든 좋아요"
@@ -60,16 +62,23 @@ final class WhereCollectionViewCell: UICollectionViewCell {
             $0.width.equalToSuperview()
             $0.top.equalTo(contentView.snp.top)
         }
+        
         whereLabel.snp.makeConstraints{
             $0.leading.equalTo(16)
             $0.top.equalTo(12)
         }
+        
         imageView.snp.makeConstraints{
             $0.width.equalTo(276)
             $0.height.equalTo(138)
             $0.top.equalTo(grayView.snp.bottom).offset(11)
             $0.centerX.equalToSuperview()
         }
+    }
+    
+    func ConfigCell(text: String, imageString: String) {
+        whereLabel.text = text
+        imageView.setImage(urlString: imageString, defaultImage: ImageLiteral.global)
     }
 }
 
