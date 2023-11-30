@@ -9,7 +9,7 @@ import Foundation
 
 class themaCardImageService {
     func getThemaCardImage(id: Int, completion: @escaping (Result<ThemaCardImageDTO, NetworkError>) -> Void) {
-        let url = URL(string: "")
+        let url = URL(string: "\(Config.baseURL)/api/dormitory/image/\(id)")
 
         guard let url = url else {
             return completion(.failure(.pathErr))
