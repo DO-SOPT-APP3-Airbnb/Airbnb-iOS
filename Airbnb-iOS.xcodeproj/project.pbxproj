@@ -32,6 +32,8 @@
 		360506E02B15C0EC00F0A7E3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */; };
 		360506E22B15C13000F0A7E3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506E12B15C13000F0A7E3 /* Config.swift */; };
 		360506F02B1716D000F0A7E3 /* CalendarDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506EF2B1716D000F0A7E3 /* CalendarDateFormatter.swift */; };
+		360506F32B19009600F0A7E3 /* MapImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506F22B19009600F0A7E3 /* MapImageService.swift */; };
+		360506F52B1900F400F0A7E3 /* MapImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506F42B1900F400F0A7E3 /* MapImageDTO.swift */; };
 		367DB4032B0DC83600B91AC8 /* WhoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4022B0DC83600B91AC8 /* WhoView.swift */; };
 		367DB4052B0DC84D00B91AC8 /* WhoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4042B0DC84D00B91AC8 /* WhoViewViewController.swift */; };
 		367DB4072B0DD24B00B91AC8 /* AccompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4062B0DD24B00B91AC8 /* AccompanyTableViewCell.swift */; };
@@ -94,6 +96,8 @@
 		360506E12B15C13000F0A7E3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		360506E32B15C14800F0A7E3 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		360506EF2B1716D000F0A7E3 /* CalendarDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDateFormatter.swift; sourceTree = "<group>"; };
+		360506F22B19009600F0A7E3 /* MapImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageService.swift; sourceTree = "<group>"; };
+		360506F42B1900F400F0A7E3 /* MapImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageDTO.swift; sourceTree = "<group>"; };
 		367DB4022B0DC83600B91AC8 /* WhoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoView.swift; sourceTree = "<group>"; };
 		367DB4042B0DC84D00B91AC8 /* WhoViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoViewViewController.swift; sourceTree = "<group>"; };
 		367DB4062B0DD24B00B91AC8 /* AccompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccompanyTableViewCell.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				347C615E2B18E6E700C98381 /* NicknameDTO.swift */,
 				02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */,
 				02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */,
+				360506F42B1900F400F0A7E3 /* MapImageDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 				02FF7D6A2B1726E800983D07 /* ThemaCardService.swift */,
 				02FF7D6E2B17359500983D07 /* ThemaCardImageService.swift */,
 				347C61602B18E7C500C98381 /* NicknameService.swift */,
+				360506F22B19009600F0A7E3 /* MapImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				02FF7D6B2B1726E800983D07 /* ThemaCardService.swift in Sources */,
 				367DB4272B0DF3F200B91AC8 /* CalendarView.swift in Sources */,
 				02FF7D6F2B17359500983D07 /* ThemaCardImageService.swift in Sources */,
+				360506F32B19009600F0A7E3 /* MapImageService.swift in Sources */,
 				34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
 				02292C082B0C5BA400F41698 /* TabBarController.swift in Sources */,
@@ -531,6 +538,7 @@
 				02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */,
 				02FF7D712B17373600983D07 /* UIImage+.swift in Sources */,
 				02222F832B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift in Sources */,
+				360506F52B1900F400F0A7E3 /* MapImageDTO.swift in Sources */,
 				360506E22B15C13000F0A7E3 /* Config.swift in Sources */,
 				36F2E5512B08975200794274 /* A.swift in Sources */,
 				36F2E55B2B08979F00794274 /* Font.swift in Sources */,
