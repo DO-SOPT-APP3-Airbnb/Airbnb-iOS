@@ -7,9 +7,9 @@
 import UIKit
 import SnapKit
 
-final class WhereViewController: UIViewController{
-    
-    
+final class WhereViewController: UIViewController {
+    var nickname:String = ""
+
     let navigationBar = CustomNavigationView(level: 1, mode: .lightMode)
     
     private let backgroundImageView: UIImageView = {
@@ -104,14 +104,17 @@ extension WhereViewController: UICollectionViewDelegate{
 
 extension WhereViewController {
     func getUser(id: Int) {
-            nicknameService().getUser(id: id) { result in
+        nicknameService().getUser(id: id) { [self] result in
                 switch result {
                 case .success(let UserResponse):
-                    let nickname = UserResponse.data.nickname
-                    self.titleLabel.text = "\(nickname)님,\n이번엔 어디로 여행가시나요?"
+                    self.nickname = UserResponse.data.nickname
+                    print(self.nickname)
+                    DispatchQueue.main.async {
+                        self.titleLabel.text = "\(self.nickname)님,\n이번엔 어디로 여행가시나요?"
+                    }
                 case .failure(let error):
                     print("API Error: \(error)")
                 }
             }
-        }
+    }
 }
