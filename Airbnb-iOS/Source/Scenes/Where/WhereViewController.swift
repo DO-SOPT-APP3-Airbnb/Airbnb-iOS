@@ -104,7 +104,7 @@ extension WhereViewController: UICollectionViewDelegate{
 
 extension WhereViewController {
     func getUser(id: Int) {
-        nicknameService().getUser(id: id) { [self] result in
+        NicknameService().getUser(id: id) { [self] result in
                 switch result {
                 case .success(let UserResponse):
                     self.nickname = UserResponse.data.nickname

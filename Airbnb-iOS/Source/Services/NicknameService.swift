@@ -7,7 +7,7 @@
 
 import Foundation
 
-class nicknameService {
+class NicknameService {
     func getUser(id: Int, completion: @escaping (Result<NicknameDTO, NetworkError>) -> Void) {
         let url = URL(string: "\(Config.baseURL)/api/user/\(id)")
 
