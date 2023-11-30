@@ -24,6 +24,9 @@
 		02FF7D6D2B17353E00983D07 /* ThemaCardImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */; };
 		02FF7D6F2B17359500983D07 /* themaCardImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6E2B17359500983D07 /* themaCardImageService.swift */; };
 		02FF7D712B17373600983D07 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D702B17373600983D07 /* UIImage+.swift */; };
+		347C615F2B18E6E700C98381 /* NicknameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C615E2B18E6E700C98381 /* NicknameDTO.swift */; };
+		347C61612B18E7C500C98381 /* nicknameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C61602B18E7C500C98381 /* nicknameService.swift */; };
+		347C61632B18EAC500C98381 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 347C61622B18EAC500C98381 /* Config.xcconfig */; };
 		34A8DE1F2B0DBF1000331C8D /* WhereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */; };
 		34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */; };
 		360506E02B15C0EC00F0A7E3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */; };
@@ -85,6 +88,9 @@
 		02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCardImageDTO.swift; sourceTree = "<group>"; };
 		02FF7D6E2B17359500983D07 /* themaCardImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themaCardImageService.swift; sourceTree = "<group>"; };
 		02FF7D702B17373600983D07 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		347C615E2B18E6E700C98381 /* NicknameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameDTO.swift; sourceTree = "<group>"; };
+		347C61602B18E7C500C98381 /* nicknameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nicknameService.swift; sourceTree = "<group>"; };
+		347C61622B18EAC500C98381 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereViewController.swift; sourceTree = "<group>"; };
 		34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereCollectionViewCell.swift; sourceTree = "<group>"; };
 		360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 				36F2E54B2B0896BE00794274 /* Resource */,
 				36F2E5452B0895CA00794274 /* Source */,
 				02CEB9252B0868C40036A100 /* Info.plist */,
+				347C61622B18EAC500C98381 /* Config.xcconfig */,
 				360506E32B15C14800F0A7E3 /* Config.xcconfig */,
 			);
 			path = "Airbnb-iOS";
@@ -314,6 +321,8 @@
 				360506E12B15C13000F0A7E3 /* Config.swift */,
 				02FF7D6A2B1726E800983D07 /* themaCardService.swift */,
 				02FF7D6E2B17359500983D07 /* themaCardImageService.swift */,
+				347C615E2B18E6E700C98381 /* NicknameDTO.swift */,
+				347C61602B18E7C500C98381 /* nicknameService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -481,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347C61632B18EAC500C98381 /* Config.xcconfig in Resources */,
 				02CEB9242B0868C40036A100 /* LaunchScreen.storyboard in Resources */,
 				02CEB9212B0868C40036A100 /* Assets.xcassets in Resources */,
 				36F2E5772B09CEDD00794274 /* Poppins-SemiBold.ttf in Resources */,
@@ -510,6 +520,7 @@
 				367DB41E2B0DF39900B91AC8 /* UIButton+.swift in Sources */,
 				367DB41C2B0DF39900B91AC8 /* UILabel+.swift in Sources */,
 				3686A6C52B0CA07F0072261D /* (null) in Sources */,
+				347C61612B18E7C500C98381 /* nicknameService.swift in Sources */,
 				367DB41F2B0DF39900B91AC8 /* Adjust+.swift in Sources */,
 				367DB4122B0DF38600B91AC8 /* WhenViewController.swift in Sources */,
 				02FF7D692B1726B500983D07 /* ThemaCardDTO.swift in Sources */,
@@ -532,6 +543,7 @@
 				360506E22B15C13000F0A7E3 /* Config.swift in Sources */,
 				36F2E5512B08975200794274 /* A.swift in Sources */,
 				36F2E55B2B08979F00794274 /* Font.swift in Sources */,
+				347C615F2B18E6E700C98381 /* NicknameDTO.swift in Sources */,
 				36F2E5842B0A61B900794274 /* UIStackView+.swift in Sources */,
 				36F2E5592B08979400794274 /* ImageLiteral.swift in Sources */,
 				367DB4052B0DC84D00B91AC8 /* WhoViewViewController.swift in Sources */,

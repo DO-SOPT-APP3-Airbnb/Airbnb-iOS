@@ -19,7 +19,7 @@ final class WhereViewController: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "솝트님,\n 이번엔 어디로 여행가시나요?"
+        label.text = "sopt님,\n이번엔 어디로 여행가시나요?"
         label.numberOfLines = 2
         label.font = .systemFont(ofSize: 25, weight: .bold)
         label.textColor = .white
@@ -34,6 +34,7 @@ final class WhereViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        getUser(id: 1)
     }
     
     func setUI() {
@@ -64,8 +65,18 @@ final class WhereViewController: UIViewController {
     
 }
 
+extension WhereViewController {
+    func getUser(id: Int) {
+            nicknameService().getUser(id: id) { result in
+                switch result {
+                case .success(let UserResponse):
+                    let nickname = UserResponse.data.nickname
+                    self.titleLabel.text = "\(nickname)님,\n이번엔 어디로 여행가시나요?"
+                case .failure(let error):
+                    print("API Error: \(error)")
+                }
+            }
+        }
+}
 
-//
-//class WhereView: UIView{
-//
-//}
+
