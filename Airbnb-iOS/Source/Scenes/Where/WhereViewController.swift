@@ -7,8 +7,10 @@
 import UIKit
 import SnapKit
 
-final class WhereViewController: UIViewController {
-    let navigationBar = CustomNavigationView(level: 1, mode: .darkMode)
+final class WhereViewController: UIViewController{
+    
+    
+    let navigationBar = CustomNavigationView(level: 1, mode: .lightMode)
     
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -19,20 +21,30 @@ final class WhereViewController: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "솝트님,\n 이번엔 어디로 여행가시나요?"
+        label.text = "솝트님,\n이번엔 어디로 여행가시나요?"
         label.numberOfLines = 2
         label.font = .systemFont(ofSize: 25, weight: .bold)
         label.textColor = .white
+        label.textAlignment = .left
         return label
         
     }()
+  
     
-    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()
-    )
-    
+    let collectionView: UICollectionView = {
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.itemSize = CGSize(width: 340, height: 190)
+        flowLayout.minimumInteritemSpacing = 8
+        flowLayout.scrollDirection = .horizontal
+        let collectionview = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionview.backgroundColor = .clear
+        collectionview.showsHorizontalScrollIndicator = false
+        return collectionview
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCollectionViewConfig()
         setUI()
     }
     
@@ -44,7 +56,7 @@ final class WhereViewController: UIViewController {
     func setHierarchy() {
         self.view.addSubviews(backgroundImageView, navigationBar,titleLabel)
         self.view.addSubview(collectionView)
-        
+       
     }
     
     func setConstraints() {
@@ -59,13 +71,32 @@ final class WhereViewController: UIViewController {
             $0.top.equalTo(navigationBar.snp.bottom).offset(16)
             
         }
+        collectionView.snp.makeConstraints{
+            $0.width.equalTo(340)
+            $0.height.equalTo(195)
+            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.bottom.equalToSuperview().inset(62)
+        }
     }
-    
-    
+    private func setCollectionViewConfig() {
+        self.collectionView.register(WhereCollectionViewCell.self,
+                                     forCellWithReuseIdentifier: WhereCollectionViewCell.identifier)
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+    }
 }
 
-
-//
-//class WhereView: UIView{
-//
-//}
+extension WhereViewController: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            guard let item = collectionView.dequeueReusableCell(withReuseIdentifier: WhereCollectionViewCell.identifier,for: indexPath) as? WhereCollectionViewCell else {return UICollectionViewCell()}
+            return item
+        }
+    
+}
+extension WhereViewController: UICollectionViewDelegate{
+    
+}
