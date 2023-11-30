@@ -8,7 +8,7 @@
 import Foundation
 
 class MapImageService {
-    func getMapImage(id: Int, completion: @escaping (Result<MapImageDTO, NetworkError>) -> Void) {
+    func getMapImage(completion: @escaping (Result<MapImageDTO, NetworkError>) -> Void) {
         let url = URL(string: "\(Config.baseURL)/api/region")
 
         guard let url = url else {
