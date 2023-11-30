@@ -53,7 +53,6 @@
 		3686A6D12B0D0BE20072261D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		36983A0F2B0BD8A300E05FFE /* (null) in Sources */ = {isa = PBXBuildFile; };
 		36F2E5512B08975200794274 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5502B08975200794274 /* A.swift */; };
-		36F2E5572B08976500794274 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5562B08976500794274 /* C.swift */; };
 		36F2E5592B08979400794274 /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5582B08979400794274 /* ImageLiteral.swift */; };
 		36F2E55B2B08979F00794274 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E55A2B08979F00794274 /* Font.swift */; };
 		36F2E55D2B0897A800794274 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E55C2B0897A800794274 /* Color.swift */; };
@@ -112,7 +111,6 @@
 		367DB4242B0DF3F200B91AC8 /* SegmentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentButton.swift; sourceTree = "<group>"; };
 		367DB4252B0DF3F200B91AC8 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		36F2E5502B08975200794274 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
-		36F2E5562B08976500794274 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		36F2E5582B08979400794274 /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
 		36F2E55A2B08979F00794274 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		36F2E55C2B0897A800794274 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -218,14 +216,14 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		367DB4012B0DC7E800B91AC8 /* WhoScene */ = {
+		367DB4012B0DC7E800B91AC8 /* Who */ = {
 			isa = PBXGroup;
 			children = (
 				367DB42C2B0DFAE000B91AC8 /* Cells */,
 				367DB42A2B0DFACB00B91AC8 /* Views */,
 				367DB42B2B0DFAD400B91AC8 /* ViewControllers */,
 			);
-			path = WhoScene;
+			path = Who;
 			sourceTree = "<group>";
 		};
 		367DB4232B0DF3F200B91AC8 /* Helper */ = {
@@ -303,9 +301,9 @@
 		36F2E5482B08967A00794274 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				347C615E2B18E6E700C98381 /* NicknameDTO.swift */,
 				02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */,
 				02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */,
-				36F2E5562B08976500794274 /* C.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,7 +315,6 @@
 				360506E12B15C13000F0A7E3 /* Config.swift */,
 				02FF7D6A2B1726E800983D07 /* ThemaCardService.swift */,
 				02FF7D6E2B17359500983D07 /* ThemaCardImageService.swift */,
-				347C615E2B18E6E700C98381 /* NicknameDTO.swift */,
 				347C61602B18E7C500C98381 /* NicknameService.swift */,
 			);
 			path = Services;
@@ -329,8 +326,8 @@
 				02292C042B0C5A0000F41698 /* TapBar */,
 				02292BFF2B0BB40100F41698 /* Explore */,
 				34A8DE1D2B0DBEE100331C8D /* Where */,
-				36F2E5782B0A5C5E00794274 /* WhenScene */,
-				367DB4012B0DC7E800B91AC8 /* WhoScene */,
+				36F2E5782B0A5C5E00794274 /* When */,
+				367DB4012B0DC7E800B91AC8 /* Who */,
 				36F2E5802B0A5F0100794274 /* Helper */,
 			);
 			path = Scenes;
@@ -374,7 +371,7 @@
 			path = Supports;
 			sourceTree = "<group>";
 		};
-		36F2E5782B0A5C5E00794274 /* WhenScene */ = {
+		36F2E5782B0A5C5E00794274 /* When */ = {
 			isa = PBXGroup;
 			children = (
 				367DB4232B0DF3F200B91AC8 /* Helper */,
@@ -382,7 +379,7 @@
 				36F2E57A2B0A5C7900794274 /* Views */,
 				36F2E5792B0A5C7000794274 /* ViewControllers */,
 			);
-			path = WhenScene;
+			path = When;
 			sourceTree = "<group>";
 		};
 		36F2E5792B0A5C7000794274 /* ViewControllers */ = {
@@ -549,7 +546,6 @@
 				367DB41A2B0DF39900B91AC8 /* UIScreen+.swift in Sources */,
 				36F2E5592B08979400794274 /* ImageLiteral.swift in Sources */,
 				36F2E5822B0A5F1800794274 /* CustomNavigationView.swift in Sources */,
-				36F2E5572B08976500794274 /* C.swift in Sources */,
 				360506E02B15C0EC00F0A7E3 /* NetworkError.swift in Sources */,
 				3686A6C72B0CAD6A0072261D /* (null) in Sources */,
 				36F2E57D2B0A5C8900794274 /* (null) in Sources */,
