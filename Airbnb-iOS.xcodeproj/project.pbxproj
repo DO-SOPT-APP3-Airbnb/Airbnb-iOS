@@ -198,15 +198,6 @@
 			path = "Airbnb-iOS";
 			sourceTree = "<group>";
 		};
-		02FF7D672B1726A700983D07 /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */,
-				02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */,
-			);
-			path = DTO;
-			sourceTree = "<group>";
-		};
 		34A8DE1D2B0DBEE100331C8D /* Where */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +299,8 @@
 		36F2E5482B08967A00794274 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */,
+				02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */,
 				36F2E5562B08976500794274 /* C.swift */,
 			);
 			path = Models;
@@ -316,7 +309,6 @@
 		36F2E5492B08968B00794274 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				02FF7D672B1726A700983D07 /* DTO */,
 				36F2E5542B08976100794274 /* B.swift */,
 				360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */,
 				360506E12B15C13000F0A7E3 /* Config.swift */,
