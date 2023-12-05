@@ -1,15 +1,15 @@
 //
-//  nicknameService.swift
+//  MapImageService.swift
 //  Airbnb-iOS
 //
-//  Created by Hyori Choi on 12/1/23.
+//  Created by 지희의 MAC on 2023/12/01.
 //
 
 import Foundation
 
-class nicknameService {
-    func getUser(id: Int, completion: @escaping (Result<NicknameDTO, NetworkError>) -> Void) {
-        let url = URL(string: "\(Config.baseURL)/api/user/\(id)")
+class MapImageService {
+    func getMapImage(completion: @escaping (Result<MapImageDTO, NetworkError>) -> Void) {
+        let url = URL(string: "\(Config.baseURL)/api/region")
 
         guard let url = url else {
             return completion(.failure(.pathErr))
@@ -18,9 +18,9 @@ class nicknameService {
             guard let data = data, error == nil else {
                 return completion(.failure(.responseDecodingError))
             }
-            let UserResponse = try? JSONDecoder().decode(NicknameDTO.self, from: data)
-            if let UserResponse = UserResponse {
-                completion(.success(UserResponse))
+            let mapResponse = try? JSONDecoder().decode(MapImageDTO.self, from: data)
+            if let mapResponse = mapResponse {
+                completion(.success(mapResponse))
             } else {
                 completion(.failure(.responseError))
             }

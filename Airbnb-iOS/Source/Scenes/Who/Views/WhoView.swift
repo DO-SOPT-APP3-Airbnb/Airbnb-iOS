@@ -22,6 +22,7 @@ class WhoView: UIView {
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = ImageLiteral.imgWho
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     

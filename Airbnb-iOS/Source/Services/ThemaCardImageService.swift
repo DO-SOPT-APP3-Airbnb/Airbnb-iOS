@@ -7,7 +7,7 @@
 
 import Foundation
 
-class themaCardImageService {
+class ThemaCardImageService {
     func getThemaCardImage(id: Int, completion: @escaping (Result<ThemaCardImageDTO, NetworkError>) -> Void) {
         let url = URL(string: "\(Config.baseURL)/api/dormitory/image/\(id)")
 

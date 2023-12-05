@@ -20,18 +20,20 @@
 		02CEB9242B0868C40036A100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CEB9222B0868C40036A100 /* LaunchScreen.storyboard */; };
 		02CEB92D2B08806B0036A100 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 02CEB92C2B08806B0036A100 /* SnapKit */; };
 		02FF7D692B1726B500983D07 /* ThemaCardDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */; };
-		02FF7D6B2B1726E800983D07 /* themaCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6A2B1726E800983D07 /* themaCardService.swift */; };
+		02FF7D6B2B1726E800983D07 /* ThemaCardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6A2B1726E800983D07 /* ThemaCardService.swift */; };
 		02FF7D6D2B17353E00983D07 /* ThemaCardImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */; };
-		02FF7D6F2B17359500983D07 /* themaCardImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6E2B17359500983D07 /* themaCardImageService.swift */; };
+		02FF7D6F2B17359500983D07 /* ThemaCardImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D6E2B17359500983D07 /* ThemaCardImageService.swift */; };
 		02FF7D712B17373600983D07 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF7D702B17373600983D07 /* UIImage+.swift */; };
 		347C615F2B18E6E700C98381 /* NicknameDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C615E2B18E6E700C98381 /* NicknameDTO.swift */; };
-		347C61612B18E7C500C98381 /* nicknameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C61602B18E7C500C98381 /* nicknameService.swift */; };
+		347C61612B18E7C500C98381 /* NicknameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347C61602B18E7C500C98381 /* NicknameService.swift */; };
 		347C61632B18EAC500C98381 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 347C61622B18EAC500C98381 /* Config.xcconfig */; };
 		34A8DE1F2B0DBF1000331C8D /* WhereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */; };
 		34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */; };
 		360506E02B15C0EC00F0A7E3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */; };
 		360506E22B15C13000F0A7E3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506E12B15C13000F0A7E3 /* Config.swift */; };
 		360506F02B1716D000F0A7E3 /* CalendarDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506EF2B1716D000F0A7E3 /* CalendarDateFormatter.swift */; };
+		360506F32B19009600F0A7E3 /* MapImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506F22B19009600F0A7E3 /* MapImageService.swift */; };
+		360506F52B1900F400F0A7E3 /* MapImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360506F42B1900F400F0A7E3 /* MapImageDTO.swift */; };
 		367DB4032B0DC83600B91AC8 /* WhoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4022B0DC83600B91AC8 /* WhoView.swift */; };
 		367DB4052B0DC84D00B91AC8 /* WhoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4042B0DC84D00B91AC8 /* WhoViewViewController.swift */; };
 		367DB4072B0DD24B00B91AC8 /* AccompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4062B0DD24B00B91AC8 /* AccompanyTableViewCell.swift */; };
@@ -44,7 +46,6 @@
 		367DB41D2B0DF39900B91AC8 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4162B0DF39900B91AC8 /* String+.swift */; };
 		367DB41E2B0DF39900B91AC8 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4172B0DF39900B91AC8 /* UIButton+.swift */; };
 		367DB41F2B0DF39900B91AC8 /* Adjust+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4182B0DF39900B91AC8 /* Adjust+.swift */; };
-		367DB4202B0DF39900B91AC8 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4192B0DF39900B91AC8 /* UIStackView+.swift */; };
 		367DB4222B0DF3CA00B91AC8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4212B0DF3CA00B91AC8 /* UIView+.swift */; };
 		367DB4262B0DF3F200B91AC8 /* SegmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4242B0DF3F200B91AC8 /* SegmentButton.swift */; };
 		367DB4272B0DF3F200B91AC8 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367DB4252B0DF3F200B91AC8 /* CalendarView.swift */; };
@@ -54,8 +55,6 @@
 		3686A6D12B0D0BE20072261D /* (null) in Sources */ = {isa = PBXBuildFile; };
 		36983A0F2B0BD8A300E05FFE /* (null) in Sources */ = {isa = PBXBuildFile; };
 		36F2E5512B08975200794274 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5502B08975200794274 /* A.swift */; };
-		36F2E5552B08976100794274 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5542B08976100794274 /* B.swift */; };
-		36F2E5572B08976500794274 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5562B08976500794274 /* C.swift */; };
 		36F2E5592B08979400794274 /* ImageLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E5582B08979400794274 /* ImageLiteral.swift */; };
 		36F2E55B2B08979F00794274 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E55A2B08979F00794274 /* Font.swift */; };
 		36F2E55D2B0897A800794274 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2E55C2B0897A800794274 /* Color.swift */; };
@@ -84,12 +83,12 @@
 		02CEB9232B0868C40036A100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02CEB9252B0868C40036A100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCardDTO.swift; sourceTree = "<group>"; };
-		02FF7D6A2B1726E800983D07 /* themaCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themaCardService.swift; sourceTree = "<group>"; };
+		02FF7D6A2B1726E800983D07 /* ThemaCardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCardService.swift; sourceTree = "<group>"; };
 		02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCardImageDTO.swift; sourceTree = "<group>"; };
-		02FF7D6E2B17359500983D07 /* themaCardImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themaCardImageService.swift; sourceTree = "<group>"; };
+		02FF7D6E2B17359500983D07 /* ThemaCardImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemaCardImageService.swift; sourceTree = "<group>"; };
 		02FF7D702B17373600983D07 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		347C615E2B18E6E700C98381 /* NicknameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameDTO.swift; sourceTree = "<group>"; };
-		347C61602B18E7C500C98381 /* nicknameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nicknameService.swift; sourceTree = "<group>"; };
+		347C61602B18E7C500C98381 /* NicknameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameService.swift; sourceTree = "<group>"; };
 		347C61622B18EAC500C98381 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		34A8DE1E2B0DBF1000331C8D /* WhereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereViewController.swift; sourceTree = "<group>"; };
 		34A8DE202B0DC62800331C8D /* WhereCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +96,8 @@
 		360506E12B15C13000F0A7E3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		360506E32B15C14800F0A7E3 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		360506EF2B1716D000F0A7E3 /* CalendarDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDateFormatter.swift; sourceTree = "<group>"; };
+		360506F22B19009600F0A7E3 /* MapImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageService.swift; sourceTree = "<group>"; };
+		360506F42B1900F400F0A7E3 /* MapImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageDTO.swift; sourceTree = "<group>"; };
 		367DB4022B0DC83600B91AC8 /* WhoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoView.swift; sourceTree = "<group>"; };
 		367DB4042B0DC84D00B91AC8 /* WhoViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoViewViewController.swift; sourceTree = "<group>"; };
 		367DB4062B0DD24B00B91AC8 /* AccompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccompanyTableViewCell.swift; sourceTree = "<group>"; };
@@ -114,8 +115,6 @@
 		367DB4242B0DF3F200B91AC8 /* SegmentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentButton.swift; sourceTree = "<group>"; };
 		367DB4252B0DF3F200B91AC8 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		36F2E5502B08975200794274 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
-		36F2E5542B08976100794274 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
-		36F2E5562B08976500794274 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		36F2E5582B08979400794274 /* ImageLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiteral.swift; sourceTree = "<group>"; };
 		36F2E55A2B08979F00794274 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		36F2E55C2B0897A800794274 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -221,14 +220,14 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		367DB4012B0DC7E800B91AC8 /* WhoScene */ = {
+		367DB4012B0DC7E800B91AC8 /* Who */ = {
 			isa = PBXGroup;
 			children = (
 				367DB42C2B0DFAE000B91AC8 /* Cells */,
 				367DB42A2B0DFACB00B91AC8 /* Views */,
 				367DB42B2B0DFAD400B91AC8 /* ViewControllers */,
 			);
-			path = WhoScene;
+			path = Who;
 			sourceTree = "<group>";
 		};
 		367DB4232B0DF3F200B91AC8 /* Helper */ = {
@@ -306,9 +305,10 @@
 		36F2E5482B08967A00794274 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				347C615E2B18E6E700C98381 /* NicknameDTO.swift */,
 				02FF7D682B1726B500983D07 /* ThemaCardDTO.swift */,
 				02FF7D6C2B17353E00983D07 /* ThemaCardImageDTO.swift */,
-				36F2E5562B08976500794274 /* C.swift */,
+				360506F42B1900F400F0A7E3 /* MapImageDTO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,13 +316,12 @@
 		36F2E5492B08968B00794274 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				36F2E5542B08976100794274 /* B.swift */,
 				360506DF2B15C0EC00F0A7E3 /* NetworkError.swift */,
 				360506E12B15C13000F0A7E3 /* Config.swift */,
-				02FF7D6A2B1726E800983D07 /* themaCardService.swift */,
-				02FF7D6E2B17359500983D07 /* themaCardImageService.swift */,
-				347C615E2B18E6E700C98381 /* NicknameDTO.swift */,
-				347C61602B18E7C500C98381 /* nicknameService.swift */,
+				02FF7D6A2B1726E800983D07 /* ThemaCardService.swift */,
+				02FF7D6E2B17359500983D07 /* ThemaCardImageService.swift */,
+				347C61602B18E7C500C98381 /* NicknameService.swift */,
+				360506F22B19009600F0A7E3 /* MapImageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -333,8 +332,8 @@
 				02292C042B0C5A0000F41698 /* TapBar */,
 				02292BFF2B0BB40100F41698 /* Explore */,
 				34A8DE1D2B0DBEE100331C8D /* Where */,
-				36F2E5782B0A5C5E00794274 /* WhenScene */,
-				367DB4012B0DC7E800B91AC8 /* WhoScene */,
+				36F2E5782B0A5C5E00794274 /* When */,
+				367DB4012B0DC7E800B91AC8 /* Who */,
 				36F2E5802B0A5F0100794274 /* Helper */,
 			);
 			path = Scenes;
@@ -378,7 +377,7 @@
 			path = Supports;
 			sourceTree = "<group>";
 		};
-		36F2E5782B0A5C5E00794274 /* WhenScene */ = {
+		36F2E5782B0A5C5E00794274 /* When */ = {
 			isa = PBXGroup;
 			children = (
 				367DB4232B0DF3F200B91AC8 /* Helper */,
@@ -386,7 +385,7 @@
 				36F2E57A2B0A5C7900794274 /* Views */,
 				36F2E5792B0A5C7000794274 /* ViewControllers */,
 			);
-			path = WhenScene;
+			path = When;
 			sourceTree = "<group>";
 		};
 		36F2E5792B0A5C7000794274 /* ViewControllers */ = {
@@ -507,7 +506,6 @@
 				34A8DE1F2B0DBF1000331C8D /* WhereViewController.swift in Sources */,
 				02292C012B0BB66B00F41698 /* ExploreView.swift in Sources */,
 				360506F02B1716D000F0A7E3 /* CalendarDateFormatter.swift in Sources */,
-				36F2E5552B08976100794274 /* B.swift in Sources */,
 				02FF7D6D2B17353E00983D07 /* ThemaCardImageDTO.swift in Sources */,
 				367DB40B2B0DF32600B91AC8 /* DateSelectCollectionViewCell.swift in Sources */,
 				367DB4102B0DF37F00B91AC8 /* WhenView.swift in Sources */,
@@ -519,19 +517,19 @@
 				367DB41E2B0DF39900B91AC8 /* UIButton+.swift in Sources */,
 				367DB41C2B0DF39900B91AC8 /* UILabel+.swift in Sources */,
 				3686A6C52B0CA07F0072261D /* (null) in Sources */,
-				347C61612B18E7C500C98381 /* nicknameService.swift in Sources */,
+				347C61612B18E7C500C98381 /* NicknameService.swift in Sources */,
 				367DB41F2B0DF39900B91AC8 /* Adjust+.swift in Sources */,
 				367DB4122B0DF38600B91AC8 /* WhenViewController.swift in Sources */,
 				02FF7D692B1726B500983D07 /* ThemaCardDTO.swift in Sources */,
 				367DB41D2B0DF39900B91AC8 /* String+.swift in Sources */,
-				02FF7D6B2B1726E800983D07 /* themaCardService.swift in Sources */,
+				02FF7D6B2B1726E800983D07 /* ThemaCardService.swift in Sources */,
 				367DB4272B0DF3F200B91AC8 /* CalendarView.swift in Sources */,
-				02FF7D6F2B17359500983D07 /* themaCardImageService.swift in Sources */,
+				02FF7D6F2B17359500983D07 /* ThemaCardImageService.swift in Sources */,
+				360506F32B19009600F0A7E3 /* MapImageService.swift in Sources */,
 				34A8DE212B0DC62800331C8D /* WhereCollectionViewCell.swift in Sources */,
 				36F2E5882B0A746D00794274 /* UILabel+.swift in Sources */,
 				02292C082B0C5BA400F41698 /* TabBarController.swift in Sources */,
 				02292C062B0C5A1200F41698 /* TabBarItem.swift in Sources */,
-				360506DE2B14905300F0A7E3 /* CalendarDateFormatter.swift in Sources */,
 				023F106B2B0F3A61006848B7 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				36F2E55D2B0897A800794274 /* Color.swift in Sources */,
 				3686A6C92B0CB2840072261D /* (null) in Sources */,
@@ -540,6 +538,7 @@
 				02CEB91A2B0868C30036A100 /* SceneDelegate.swift in Sources */,
 				02FF7D712B17373600983D07 /* UIImage+.swift in Sources */,
 				02222F832B0DBFEA00FC64F6 /* ThemaCollectionViewCell.swift in Sources */,
+				360506F52B1900F400F0A7E3 /* MapImageDTO.swift in Sources */,
 				360506E22B15C13000F0A7E3 /* Config.swift in Sources */,
 				36F2E5512B08975200794274 /* A.swift in Sources */,
 				36F2E55B2B08979F00794274 /* Font.swift in Sources */,
@@ -555,7 +554,6 @@
 				367DB41A2B0DF39900B91AC8 /* UIScreen+.swift in Sources */,
 				36F2E5592B08979400794274 /* ImageLiteral.swift in Sources */,
 				36F2E5822B0A5F1800794274 /* CustomNavigationView.swift in Sources */,
-				36F2E5572B08976500794274 /* C.swift in Sources */,
 				360506E02B15C0EC00F0A7E3 /* NetworkError.swift in Sources */,
 				3686A6C72B0CAD6A0072261D /* (null) in Sources */,
 				36F2E57D2B0A5C8900794274 /* (null) in Sources */,

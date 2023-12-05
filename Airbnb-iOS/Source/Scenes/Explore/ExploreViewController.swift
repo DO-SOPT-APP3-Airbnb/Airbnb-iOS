@@ -151,7 +151,7 @@ extension ExploreViewController: UICollectionViewDelegate, UICollectionViewDeleg
 
 extension ExploreViewController {
     func getThemaCard(id: Int) {
-        themaCardService().getThemaCard(id: id) { result in
+        ThemaCardService().getThemaCard(id: id) { result in
             switch result {
             case .success(let themaCardResponse):
                 self.themaCardInfo = themaCardResponse
@@ -167,7 +167,7 @@ extension ExploreViewController {
     }
 
     func getThemaCardImage(id: Int) {
-        themaCardImageService().getThemaCardImage(id: id) { result in
+        ThemaCardImageService().getThemaCardImage(id: id) { result in
             switch result {
             case .success(let themaCardImageResponse):
                 self.themaCardImage = themaCardImageResponse
